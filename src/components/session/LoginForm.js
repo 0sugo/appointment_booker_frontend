@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {  Link } from 'react-router-dom';
 
 
-function LoginForm() {
+const LoginForm = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
