@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function RegistrationForm() {
   const [formData, setFormData] = useState({
@@ -51,6 +52,7 @@ function RegistrationForm() {
       {registrationSuccess ? ( // Conditional rendering for success message
         <div>
           <p>Registration successful! You can now log in.</p>
+          {/* <Link to="/login">Login</Link> */}
         </div>
       ) : (
         <form onSubmit={handleSubmit}>
@@ -96,7 +98,9 @@ function RegistrationForm() {
           <br />
           <button type="submit">Register</button>
         </form>
+        
       )}
+      <Link to="/login">Login</Link>
     </div>
   );
 }
