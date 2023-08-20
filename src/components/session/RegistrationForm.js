@@ -8,9 +8,11 @@ const RegistrationForm = () => {
     password: '',
     password_confirmation: '',
   });
-  
-  const [registrationSuccess, setRegistrationSuccess] = useState(false); // New state
 
+  const [registrationSuccess, setRegistrationSuccess] = useState(false);
+  const [registrationFailure, setRegistrationFailure] = useState(false);
+  const [errorData, setErrorData] = useState(null); 
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -33,26 +35,23 @@ const RegistrationForm = () => {
       });
 
       if (response.ok) {
-        // Handle successful registration
-        setRegistrationSuccess(true); // Set registration success state
-        console.log('User registered:', response);
+        setRegistrationSuccess(true);
       } else {
         const data = await response.json();
-        // Handle error response
-        console.error('Registration error:', data.error);
+        setErrorData(data.errors);
+        setRegistrationFailure(true);
       }
     } catch (error) {
-      // Handle fetch error
+      throw new Error(error);
     }
   };
 
   return (
     <div>
       <h2>Register</h2>
-      {registrationSuccess ? ( // Conditional rendering for success message
+      {registrationSuccess ? (
         <div>
           <p>Registration successful! You can now log in.</p>
-          {/* <Link to="/login">Login</Link> */}
         </div>
       ) : (
         <form onSubmit={handleSubmit}>
@@ -65,6 +64,9 @@ const RegistrationForm = () => {
               onChange={handleChange}
             />
           </label>
+          {registrationFailure && errorData && errorData.name && (
+            <p>Name {errorData.name[0]}</p>
+          )}
           <br />
           <label>
             Email:
@@ -75,6 +77,9 @@ const RegistrationForm = () => {
               onChange={handleChange}
             />
           </label>
+          {registrationFailure && errorData && errorData.email && (
+            <p>Email {errorData.email[0]}</p>
+          )}
           <br />
           <label>
             Password:
@@ -85,6 +90,10 @@ const RegistrationForm = () => {
               onChange={handleChange}
             />
           </label>
+          
+          {registrationFailure && errorData && errorData.password && (
+            <p>Password {errorData.password[0]}</p>
+          )}
           <br />
           <label>
             Confirm Password:
@@ -95,10 +104,12 @@ const RegistrationForm = () => {
               onChange={handleChange}
             />
           </label>
+          {registrationFailure && errorData && errorData.password_confirmation && (
+            <p>Password {errorData.password_confirmation[0]}</p>
+          )}
           <br />
           <button type="submit">Register</button>
         </form>
-        
       )}
       <Link to="/login">Login</Link>
     </div>
