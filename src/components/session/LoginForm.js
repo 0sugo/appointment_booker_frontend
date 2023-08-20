@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import {  Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import {  Link, useNavigate  } from 'react-router-dom';
 
 
 const LoginForm = () => {
@@ -9,6 +9,9 @@ const LoginForm = () => {
   });
 
   const [loginSuccess, setLoginSuccess] = useState(false); // New state
+  
+  const [userData, setUserData] = useState(null);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,8 +37,11 @@ const LoginForm = () => {
       if (response.ok) {
         const data = await response.json(); // Parse the JSON response
         // Handle successful login
+        setUserData(data);
+        localStorage.setItem('userData', JSON.stringify(data));
         setLoginSuccess(true); // Set login success state
         console.log('Login successful:', data); 
+        navigate('/homepage')
      } else {
         const data = await response.json();
         // Handle error response
@@ -52,6 +58,9 @@ const LoginForm = () => {
       {loginSuccess ? ( // Conditional rendering for success message
         <div>
           <p>Login successful! Welcome back.</p>
+          {/* <Link to={{ pathname: '/homepage', state: { userData } }}>Go to Homepage</Link>
+         */}
+         {/* <NavigateToHomepage userData={userData} /> */}
         </div>
       ) : (
         <form onSubmit={handleSubmit}>
@@ -76,9 +85,10 @@ const LoginForm = () => {
           </label>
           <br />
           <button type="submit">Login</button>
+          <Link to="/register">Register</Link>
         </form>
       )}
-         <Link to="/register">Register</Link>
+         
     </div>
     
   );
