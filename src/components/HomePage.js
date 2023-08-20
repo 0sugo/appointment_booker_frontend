@@ -1,4 +1,5 @@
 import React from 'react';
+import LogoutButton from './LogoutButton';
 
 const HomePage = () => {
   const userDataString = localStorage.getItem('userData');
@@ -8,6 +9,7 @@ const HomePage = () => {
     <div>
       <h2>Hello {userData.user_name} Welcome to the Homepage</h2>
 
+    <LogoutButton />
     </div>
   );
 };
