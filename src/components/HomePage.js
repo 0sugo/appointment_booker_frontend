@@ -7,7 +7,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <h2>Hello {userData.user_name} Welcome to the Homepage</h2>
+      <h2>Hello {userData.name} Welcome to the Homepage</h2>
 
     <LogoutButton />
     </div>

@@ -8,9 +8,9 @@ const LoginForm = () => {
     password: '',
   });
 
-  const [loginSuccess, setLoginSuccess] = useState(false); // New state
+  const [loginSuccess, setLoginSuccess] = useState(false); 
+  const [loginFailure, setLoginFailure] = useState(false);
   
-  const [userData, setUserData] = useState(null);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -21,7 +21,7 @@ const LoginForm = () => {
     }));
   };
 
-  const url = 'http://127.0.0.1:4000/api/v1/users/sign_in'; // Update URL as needed
+  const url = 'http://127.0.0.1:4000/api/v1/users/sign_in'; 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -35,32 +35,24 @@ const LoginForm = () => {
       });
 
       if (response.ok) {
-        const data = await response.json(); // Parse the JSON response
-        // Handle successful login
-        setUserData(data);
+        const data = await response.json(); 
         localStorage.setItem('userData', JSON.stringify(data));
-        setLoginSuccess(true); // Set login success state
-        console.log('Login successful:', data); 
+        setLoginSuccess(true);  
         navigate('/homepage')
      } else {
-        const data = await response.json();
-        // Handle error response
-        console.error('Login error:', data);
+        setLoginFailure(true)
       }
     } catch (error) {
-      // Handle fetch error
+      throw new Error(error);
     }
   };
 
   return (
     <div>
       <h2>Login</h2>
-      {loginSuccess ? ( // Conditional rendering for success message
+      {loginSuccess ? ( 
         <div>
           <p>Login successful! Welcome back.</p>
-          {/* <Link to={{ pathname: '/homepage', state: { userData } }}>Go to Homepage</Link>
-         */}
-         {/* <NavigateToHomepage userData={userData} /> */}
         </div>
       ) : (
         <form onSubmit={handleSubmit}>
@@ -85,10 +77,16 @@ const LoginForm = () => {
           </label>
           <br />
           <button type="submit">Login</button>
-          <Link to="/register">Register</Link>
+          <Link to="/register">Register</Link>        
         </form>
+        
       )}
          
+        {loginFailure && (
+          <div>
+            <p>Invalid email or password.</p>
+          </div>
+        )}
     </div>
     
   );
