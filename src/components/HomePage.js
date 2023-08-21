@@ -1,5 +1,4 @@
 import React from 'react';
-/* eslint-disable */
 import NavigationPanel from './NavigationPanel';
 
 const HomePage = () => {
@@ -11,7 +10,12 @@ const HomePage = () => {
       <div>
         <NavigationPanel />
       </div>
-      <h2>Hello {userData.name} Welcome to the Homepage</h2>
+      <h2>
+        Hello
+        {userData.name}
+        {' '}
+        Welcome to the Homepage
+      </h2>
     </div>
   );
 };
