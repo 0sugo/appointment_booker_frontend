@@ -42,3 +42,6 @@ const detailSlice = createSlice({
       });
   },
 });
+
+export const doctorDetailsSelector = (state) => state.doctorDetails;
+export default detailSlice.reducer;

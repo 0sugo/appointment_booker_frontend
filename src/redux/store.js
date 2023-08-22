@@ -1,7 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore } from "@reduxjs/toolkit";
+import detailsReducer from "./doctors/detailsSlice";
 
 const store = configureStore({
-  reducer: {},
+  reducer: {
+    doctorDetails: detailsReducer,
+  },
 });
 
 export default store;
