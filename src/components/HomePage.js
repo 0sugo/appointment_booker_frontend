@@ -1,7 +1,7 @@
 import React from 'react';
-import LogoutButton from './LogoutButton';
-import AddItemForm from  './AddItemForm';
 import { Link } from 'react-router-dom';
+import LogoutButton from './LogoutButton';
+
 const HomePage = () => {
   const userDataString = localStorage.getItem('userData');
   const userData = JSON.parse(userDataString);
@@ -20,6 +20,7 @@ const HomePage = () => {
         {' '}
         Welcome to the Homepage
       </h2>
+      <LogoutButton />
 
     </div>
   );
