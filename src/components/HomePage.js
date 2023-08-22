@@ -1,5 +1,6 @@
 import React from 'react';
 import NavigationPanel from './NavigationPanel';
+import AllDoctors from './AllDoctors';
 
 const HomePage = () => {
   const userDataString = localStorage.getItem('userData');
@@ -16,6 +17,9 @@ const HomePage = () => {
         {' '}
         Welcome to the Homepage
       </h2>
+      <div>
+        <AllDoctors />
+      </div>
     </div>
   );
 };
