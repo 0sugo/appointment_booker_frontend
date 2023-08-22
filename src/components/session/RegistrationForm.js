@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -12,8 +11,8 @@ const RegistrationForm = () => {
 
   const [registrationSuccess, setRegistrationSuccess] = useState(false);
   const [registrationFailure, setRegistrationFailure] = useState(false);
-  const [errorData, setErrorData] = useState(null); 
-  
+  const [errorData, setErrorData] = useState(null);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -56,9 +55,10 @@ const RegistrationForm = () => {
         </div>
       ) : (
         <form onSubmit={handleSubmit}>
-          <label>
+          <label htmlFor="name">
             Name:
             <input
+              id="name"
               type="text"
               name="name"
               value={formData.name}
@@ -66,12 +66,16 @@ const RegistrationForm = () => {
             />
           </label>
           {registrationFailure && errorData && errorData.name && (
-            <p>Name {errorData.name[0]}</p>
+            <p>
+              Name
+              {errorData.name[0]}
+            </p>
           )}
           <br />
-          <label>
+          <label htmlFor="email">
             Email:
             <input
+              id="email"
               type="email"
               name="email"
               value={formData.email}
@@ -79,26 +83,34 @@ const RegistrationForm = () => {
             />
           </label>
           {registrationFailure && errorData && errorData.email && (
-            <p>Email {errorData.email[0]}</p>
+            <p>
+              Email
+              {errorData.email[0]}
+            </p>
           )}
           <br />
-          <label>
+          <label htmlFor="password">
             Password:
             <input
+              id="password"
               type="password"
               name="password"
               value={formData.password}
               onChange={handleChange}
             />
           </label>
-          
+
           {registrationFailure && errorData && errorData.password && (
-            <p>Password {errorData.password[0]}</p>
+            <p>
+              Password
+              {errorData.password[0]}
+            </p>
           )}
           <br />
-          <label>
+          <label htmlFor="confirm_password">
             Confirm Password:
             <input
+              id="confirm_password"
               type="password"
               name="password_confirmation"
               value={formData.password_confirmation}
@@ -106,7 +118,10 @@ const RegistrationForm = () => {
             />
           </label>
           {registrationFailure && errorData && errorData.password_confirmation && (
-            <p>Password {errorData.password_confirmation[0]}</p>
+            <p>
+              Password
+              {errorData.password_confirmation[0]}
+            </p>
           )}
           <br />
           <button type="submit">Register</button>
@@ -115,6 +130,6 @@ const RegistrationForm = () => {
       <Link to="/login">Login</Link>
     </div>
   );
-}
+};
 
 export default RegistrationForm;
