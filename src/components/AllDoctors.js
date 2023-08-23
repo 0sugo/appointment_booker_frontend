@@ -1,27 +1,27 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchDoctors } from './redux/doctorSlice';
+import { fetchDoctors } from '../redux/doctors/doctorSlice';
 
 const AllDoctors = () => {
-    const allDoctors = useSelector((state) => state.doctors.allDoctors);
-    const dispatch = useDispatch();
+  const allDoctors = useSelector((state) => state.doctors.allDoctors);
+  const dispatch = useDispatch();
 
-    useEffect(() => {
-        if (allDoctors.length === 0) {
-            dispatch(fetchDoctors());
-        }
-    }, [dispatch, allDoctors.length])
+  useEffect(() => {
+    if (allDoctors.length === 0) {
+      dispatch(fetchDoctors());
+    }
+  }, [dispatch, allDoctors.length]);
 
-    return (
-        <div className='allDoctors'>
-            Hello
-            {allDoctors.forEach(eachDoctor => {
-                <p>
-                    {console.log(eachDoctor)}
-                </p>
-            })}
-        </div>
-    );
+  return (
+    <div className="allDoctors">
+      Hello
+      {allDoctors.forEach((eachDoctor) => {
+        <p>
+          {console.log(eachDoctor)}
+        </p>;
+      })}
+    </div>
+  );
 };
 
 export default AllDoctors;
