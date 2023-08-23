@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { fetchDoctors } from '../redux/doctors/doctorSlice';
 
 const AllDoctors = () => {
@@ -24,33 +23,41 @@ const AllDoctors = () => {
 
   return (
     <div>
-      <h2>Available Doctors</h2>
-      <p>Please select a doctor to book an appointment with</p>
+      <div className="home_header">
+        <h2>Available Doctors</h2>
+        <p>Please select a doctor to book an appointment with</p>
+      </div>
 
       <div className="homepage_content">
-        <button type="button" onClick={scrollLeft} className='prev_btn'>&lt;</button>
+        <button type="button" onClick={scrollLeft} className="prev_btn">&lt;</button>
 
         <section className="allDoctors" ref={doctorsContainerRef}>
+
           {allDoctors.map((eachDoctor) => (
-            <article className="eachDoctor" key={eachDoctor.id}>
-              <img src={eachDoctor.image_url} alt={eachDoctor.name} />
-              <h3>{eachDoctor.name}</h3>
-              <p>
-                Specializes in
-                {' '}
-                {eachDoctor.specialisation}
-                {' '}
-                and currently practicing in
-                {' '}
-                {eachDoctor.city}
-                {' '}
-                city
-              </p>
-              <Link to="">See More</Link>
-            </article>
+            <a href={`/doctordetails/${eachDoctor.id}`} key={eachDoctor.id}>
+              <article className="eachDoctor">
+
+                <div className="img_div">
+                  <img src={eachDoctor.image_url} alt={eachDoctor.name} />
+                </div>
+                <h3 className="each_doc_name">{eachDoctor.name}</h3>
+                <p className="each_doc_spec">
+                  Specializes in
+                  {' '}
+                  {eachDoctor.specialisation}
+                  {' '}
+                  and currently practicing in
+                  {' '}
+                  {eachDoctor.city}
+                  {' '}
+                  city
+                </p>
+
+              </article>
+            </a>
           ))}
         </section>
-        <button type="button" onClick={scrollRight} className='next_btn'>&gt;</button>
+        <button type="button" onClick={scrollRight} className="next_btn">&gt;</button>
       </div>
 
     </div>
