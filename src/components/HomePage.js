@@ -14,6 +14,10 @@ const HomePage = () => {
         </>
       )}
 
+      <br />
+
+      <Link to="/all-reservations">All Reservations</Link>
+
       <h2>
         Hello
         {userData.name}
