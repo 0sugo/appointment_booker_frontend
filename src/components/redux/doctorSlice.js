@@ -15,7 +15,7 @@ export const fetchDoctors = createAsyncThunk(FETCH_DOCTORS, async () => {
 const doctorSlice = createSlice({
   name: 'doctor',
   initialState: {
-    allDoctors: null,
+    allDoctors: [],
   },
   reducers: {},
   extraReducers: (builder) => {
