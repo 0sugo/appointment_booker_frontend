@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
@@ -13,13 +12,13 @@ const AddItemForm = () => {
 
   const [successMessage, setSuccessMessage] = useState('');
 
-  useEffect(()=>{
+  useEffect(() => {
     const userDataString = localStorage.getItem('userData');
-    if(userDataString){
+    if (userDataString) {
       const userData = JSON.parse(userDataString);
       setCurrentUser(userData);
     }
-  },[])
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -54,17 +53,17 @@ const AddItemForm = () => {
     <>
       <div>AddItemForm</div>
       <form onSubmit={handleSubmit}>
-        <label>
+        <label htmlFor="doctorId">
           Doctor id:
           <input type="text" value={doctorId} onChange={(e) => setDoctorId(e.target.value)} placeholder="Choose doctor" />
         </label>
         <br />
-        <label>
+        <label htmlFor="date">
           Date:
           <input type="datetime-local" value={date} onChange={(e) => setDate(e.target.value)} placeholder="Choose date" />
         </label>
         <br />
-        <label>
+        <label htmlFor="city">
           City:
           <input type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="Choose city" />
         </label>
