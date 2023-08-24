@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { addReservation } from '../redux/reservations/reservationsSlice';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addReservation, fetchAllDoctors } from '../redux/reservations/reservationsSlice';
 
 const AddItemForm = () => {
   const dispatch = useDispatch();
   const [doctorId, setDoctorId] = useState('');
   const [date, setDate] = useState('');
   const [city, setCity] = useState('');
-
   const [successMessage, setSuccessMessage] = useState('');
+  const doctors = useSelector((state) => state.reservations.doctors);
+
+  useEffect(() => {
+    dispatch(fetchAllDoctors());
+  }, [dispatch]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,8 +37,15 @@ const AddItemForm = () => {
       <div>AddItemForm</div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="doctorId">
-          Doctor id:
-          <input type="text" value={doctorId} onChange={(e) => setDoctorId(e.target.value)} placeholder="Choose doctor" />
+          Doctor:
+          <select value={doctorId} onChange={(e) => setDoctorId(e.target.value)}>
+            <option value="">Select a doctor</option>
+            {doctors.map((doctor) => (
+              <option key={doctor.id} value={doctor.id}>
+                {doctor.name}
+              </option>
+            ))}
+          </select>
         </label>
         <br />
         <label htmlFor="date">
