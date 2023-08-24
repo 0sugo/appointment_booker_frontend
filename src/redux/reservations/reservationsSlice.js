@@ -1,11 +1,36 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const url = 'http://localhost:4000/api/v1/reservations';
+const getUserId = () => {
+  const userData = JSON.parse(localStorage.getItem('userData'));
+  return userData ? userData.id : null;
+};
+
+const url = 'http://localhost:4000/api/v1/users';
+
 export const fetchAllReservations = createAsyncThunk('reservations/fetchAll', async () => {
+  const userId = getUserId();
+  if (userId === null) {
+    return [];
+  }
+
   try {
-    const response = await axios(url);
+    const response = await axios(`${url}/${userId}/reservations`);
     return response.data.data;
+  } catch (error) {
+    return (error);
+  }
+});
+
+export const deleteReservation = createAsyncThunk('reservations/delete', async (id) => {
+  const userId = getUserId();
+  if (userId === null) {
+    return id;
+  }
+
+  try {
+    await axios.delete(`${url}/${userId}/reservations/${id}`);
+    return id;
   } catch (error) {
     return (error);
   }
@@ -32,6 +57,10 @@ const reservationsSlice = createSlice({
         state.isLoading = false;
         state.action = [];
         state.error = action.error.message;
+      })
+      .addCase(deleteReservation.fulfilled, (state, action) => {
+        const x = state.reservations.filter((reservation) => reservation.id !== action.payload);
+        state.reservations = x;
       });
   },
 
