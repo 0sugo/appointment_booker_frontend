@@ -2,7 +2,7 @@ body {
   margin: 0;
 }
 
-.home_header{
+.home_header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,13 +24,13 @@ body {
 
 .allDoctors {
   display: flex;
-  overflow-x: auto; 
-  padding: 20px 0; 
-  gap: 20px; 
+  overflow-x: auto;
+  padding: 20px 0;
+  gap: 20px;
 }
 
 .eachDoctor {
-  width: 200px; 
+  width: 200px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@ body {
   align-items: center;
 }
 
-.img_div{
+.img_div {
   width: 200px;
   height: 150px;
 }
@@ -52,14 +52,13 @@ img {
 
 h2,
 .each_doc_name {
-  color: #222222;
+  color: #222;
 }
 
 p {
   color: #636363;
   text-align: center;
 }
-
 
 .prev_btn {
   border-top-right-radius: 20px;
@@ -103,4 +102,35 @@ a {
   height: 5px;
   background-color: #ddd;
   border-radius: 2px;
+}
+
+@media screen and (max-width: 426px) {
+  .homepage_content {
+    justify-content: center;
+  }
+
+  .allDoctors {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prev_btn,
+  .next_btn {
+    display: none;
+  }
+
+  .eachDoctor {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img_div {
+    width: 100%;
+    height: 250px;
+  }
 }
