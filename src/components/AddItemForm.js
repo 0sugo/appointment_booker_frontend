@@ -31,17 +31,14 @@ const AddItemForm = () => {
         city,
       });
 
-      // Handle success or show a message to the user
-      console.log(response.data);
-    } catch (error) {
-      // Handle error or show error message
-      console.error(error);
+      setSuccessMessage(response.data.message);
+    } catch (response) {
+      setSuccessMessage(response.data.message);
     }
     setDoctorId('');
     setDate('');
     setCity('');
 
-    setSuccessMessage('Reservation submitted successfully');
     dispatch(fetchAllReservations());
 
     setTimeout(() => {
