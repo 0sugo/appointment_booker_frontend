@@ -7,6 +7,7 @@ const getUserId = () => {
 };
 
 const url = 'http://localhost:4000/api/v1/users';
+const BaseUrl = 'http://localhost:4000/api/v1';
 
 export const fetchAllReservations = createAsyncThunk('reservations/fetchAll', async () => {
   const userId = getUserId();
@@ -57,8 +58,19 @@ export const addReservation = createAsyncThunk('reservations/add', async ({ doct
   }
 });
 
+export const fetchAllDoctors = createAsyncThunk('doctors/fetchAll', async () => {
+  try {
+    const response = await axios(`${BaseUrl}/doctors`);
+    return response.data;
+  } catch (error) {
+    return error;
+  }
+});
+
 const initialState = {
   reservations: [],
+  doctors: [],
+  isLoadingDoctors: false,
   isLoading: false,
   error: '',
 };
@@ -82,6 +94,16 @@ const reservationsSlice = createSlice({
       .addCase(deleteReservation.fulfilled, (state, action) => {
         const x = state.reservations.filter((reservation) => reservation.id !== action.payload);
         state.reservations = x;
+      })
+      .addCase(fetchAllDoctors.pending, (state) => {
+        state.isLoadingDoctors = true;
+      })
+      .addCase(fetchAllDoctors.fulfilled, (state, action) => {
+        state.isLoadingDoctors = false;
+        state.doctors = action.payload;
+      })
+      .addCase(fetchAllDoctors.rejected, (state) => {
+        state.isLoadingDoctors = false;
       });
   },
 
