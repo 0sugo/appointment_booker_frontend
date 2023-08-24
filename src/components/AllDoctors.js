@@ -14,11 +14,11 @@ const AllDoctors = () => {
   }, [dispatch, allDoctors.length]);
 
   const scrollLeft = () => {
-    doctorsContainerRef.current.scrollLeft -= 300; 
+    doctorsContainerRef.current.scrollLeft -= 300;
   };
 
   const scrollRight = () => {
-    doctorsContainerRef.current.scrollLeft += 300; 
+    doctorsContainerRef.current.scrollLeft += 300;
   };
 
   return (

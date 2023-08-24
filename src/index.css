@@ -9,6 +9,16 @@ body {
   justify-content: center;
 }
 
+h2,
+.each_doc_name {
+  color: #222;
+}
+
+p {
+  color: #636363;
+  text-align: center;
+}
+
 .home_header > h2 {
   margin-bottom: 0;
 }
@@ -48,16 +58,6 @@ img {
   height: 100%;
   object-fit: cover;
   border-radius: 5px;
-}
-
-h2,
-.each_doc_name {
-  color: #222;
-}
-
-p {
-  color: #636363;
-  text-align: center;
 }
 
 .prev_btn {
