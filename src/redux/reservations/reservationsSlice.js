@@ -36,6 +36,27 @@ export const deleteReservation = createAsyncThunk('reservations/delete', async (
   }
 });
 
+export const addReservation = createAsyncThunk('reservations/add', async ({ doctorId, date, city }) => {
+  const userId = getUserId();
+
+  if (userId === null) {
+    throw new Error('User ID not available');
+  }
+
+  try {
+    const response = await axios.post(`${url}/${userId}/reservations`, {
+      user_id: userId,
+      doctor_id: doctorId,
+      date,
+      city,
+    });
+
+    return response.data.data;
+  } catch (error) {
+    throw new Error(error.response?.data?.message || 'Error adding reservation');
+  }
+});
+
 const initialState = {
   reservations: [],
   isLoading: false,
