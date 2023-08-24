@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchAllReservations());
-  }, []);
+  }, [dispatch]);
   return (
     <Router>
       <Routes>
