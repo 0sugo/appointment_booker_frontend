@@ -18,7 +18,7 @@ const AllReservations = () => {
   };
   return (
     <div>
-      <h2>AllReservations</h2>
+      <h2>Reservations</h2>
       {isLoading ? (
         <p>Loading...</p>
       ) : (
@@ -27,18 +27,32 @@ const AllReservations = () => {
             const doctor = doctors.find((doc) => doc.id === reservation.doctor_id);
             return (
               <li key={reservation.id}>
-                Doctor Name:
-                {' '}
-                {doctor ? doctor.name : 'Unknown'}
-                ,
-                Date:
-                {' '}
-                {reservation.date}
-                ,
-                City:
-                {' '}
-                {reservation.city}
+                <div>
+                  <img src={doctor.image_url} alt={doctor.name} style={{ width: '100px' }} />
+                </div>
+                <div>
+                  Doctor Name:
+                  {' '}
+                  {doctor ? doctor.name : 'Unknown'}
+                  ,
+                  <br />
+                  Specialisation:
+                  {' '}
+                  {doctor.specialisation}
+                  ,
+                  <br />
+                  Appointment date:
+                  {' '}
+                  {reservation.date}
+                  ,
+                  <br />
+                  City of appointment:
+                  {' '}
+                  {reservation.city}
+                  <br />
+                </div>
                 <button onClick={() => handleDelete(reservation.id)} type="button">delete</button>
+                <hr />
               </li>
             );
           })}
