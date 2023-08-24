@@ -14,11 +14,11 @@ const AllDoctors = () => {
   }, [dispatch, allDoctors.length]);
 
   const scrollLeft = () => {
-    doctorsContainerRef.current.scrollLeft -= 300; // Adjust the scroll amount
+    doctorsContainerRef.current.scrollLeft -= 300; 
   };
 
   const scrollRight = () => {
-    doctorsContainerRef.current.scrollLeft += 300; // Adjust the scroll amount
+    doctorsContainerRef.current.scrollLeft += 300; 
   };
 
   return (
@@ -26,6 +26,11 @@ const AllDoctors = () => {
       <div className="home_header">
         <h2>Available Doctors</h2>
         <p>Please select a doctor to book an appointment with</p>
+        <div className="dots">
+          {[...Array(15)].map(() => (
+            <div key="div" className="dot" />
+          ))}
+        </div>
       </div>
 
       <div className="homepage_content">
@@ -41,6 +46,11 @@ const AllDoctors = () => {
                   <img src={eachDoctor.image_url} alt={eachDoctor.name} />
                 </div>
                 <h3 className="each_doc_name">{eachDoctor.name}</h3>
+                <div className="dots">
+                  {[...Array(15)].map(() => (
+                    <div key="div" className="dot" />
+                  ))}
+                </div>
                 <p className="each_doc_spec">
                   Specializes in
                   {' '}

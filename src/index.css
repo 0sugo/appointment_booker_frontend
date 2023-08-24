@@ -9,6 +9,14 @@ body {
   justify-content: center;
 }
 
+.home_header > h2 {
+  margin-bottom: 0;
+}
+
+.home_header > p {
+  margin-bottom: 40px;
+}
+
 .homepage_content {
   display: flex;
   align-items: center;
@@ -22,7 +30,6 @@ body {
 }
 
 .eachDoctor {
-  /* flex: 0 0 auto; */
   width: 200px; 
   padding: 10px;
   display: flex;
@@ -57,11 +64,13 @@ p {
 .prev_btn {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  margin-right: 20px;
 }
 
 .next_btn {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  margin-left: 20px;
 }
 
 .prev_btn,
@@ -84,4 +93,14 @@ a {
   text-decoration: none;
 }
 
+.dots {
+  display: flex;
+  gap: 5px;
+}
 
+.dot {
+  width: 5px;
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 2px;
+}
