@@ -1,45 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchAllReservations } from '../redux/reservations/reservationsSlice';
+import { addReservation } from '../redux/reservations/reservationsSlice';
 
 const AddItemForm = () => {
   const dispatch = useDispatch();
-  const [currentUser, setCurrentUser] = useState(null);
   const [doctorId, setDoctorId] = useState('');
   const [date, setDate] = useState('');
   const [city, setCity] = useState('');
 
   const [successMessage, setSuccessMessage] = useState('');
 
-  useEffect(() => {
-    const userDataString = localStorage.getItem('userData');
-    if (userDataString) {
-      const userData = JSON.parse(userDataString);
-      setCurrentUser(userData);
-    }
-  }, []);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`http://localhost:4000/api/v1/users/${currentUser.id}/reservations`, {
-        user_id: currentUser ? currentUser.id : null,
-        doctor_id: doctorId,
-        date,
-        city,
-      });
-
-      setSuccessMessage(response.data.message);
-    } catch (response) {
-      setSuccessMessage(response.data.message);
+      await dispatch(addReservation({ doctorId, date, city }));
+      setSuccessMessage('Reservation added successfully');
+      setDoctorId('');
+      setDate('');
+      setCity('');
+    } catch (error) {
+      setSuccessMessage('Error adding reservation');
     }
-    setDoctorId('');
-    setDate('');
-    setCity('');
-
-    dispatch(fetchAllReservations());
 
     setTimeout(() => {
       setSuccessMessage('');
