@@ -8,7 +8,7 @@ const NavigationPanel = () => (
 
     {localStorage.getItem('userData') && (
     <>
-      <Link to="/add-item">Add Item</Link>
+      <Link to="/add-item">Reserve form</Link>
     </>
     )}
 
