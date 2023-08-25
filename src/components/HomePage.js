@@ -1,4 +1,5 @@
 import React from 'react';
+import LogoutButton from './LogoutButton';
 import NavigationPanel from './NavigationPanel';
 import AllDoctors from './AllDoctors';
 
