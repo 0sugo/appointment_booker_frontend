@@ -30,6 +30,9 @@ p {
 .homepage_content {
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  height: 400px;
 }
 
 .allDoctors {
@@ -37,6 +40,19 @@ p {
   overflow-x: auto;
   padding: 20px 0;
   gap: 20px;
+  width: 80%;
+  height: 100%;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+}
+
+.social-link {
+  list-style: none;
+  color: #ddd;
 }
 
 .eachDoctor {
@@ -95,6 +111,7 @@ a {
 .dots {
   display: flex;
   gap: 5px;
+  margin-bottom: 30px
 }
 
 .dot {

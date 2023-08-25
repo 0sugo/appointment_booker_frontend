@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import {
+  FaFacebookF, FaTwitter, FaLinkedinIn,
+} from 'react-icons/fa';
 import { fetchDoctors } from '../redux/doctors/doctorSlice';
 
 const AllDoctors = () => {
@@ -22,7 +25,7 @@ const AllDoctors = () => {
   };
 
   return (
-    <div>
+    <div className="home">
       <div className="home_header">
         <h2>Available Doctors</h2>
         <p>Please select a doctor to book an appointment with</p>
@@ -62,6 +65,8 @@ const AllDoctors = () => {
                   {' '}
                   city
                 </p>
+
+          
 
               </article>
             </a>
