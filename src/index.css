@@ -31,7 +31,6 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-
   height: 400px;
 }
 
@@ -111,7 +110,7 @@ a {
 .dots {
   display: flex;
   gap: 5px;
-  margin-bottom: 30px
+  margin-bottom: 30px;
 }
 
 .dot {

@@ -66,7 +66,17 @@ const AllDoctors = () => {
                   city
                 </p>
 
-          
+                <ul className="social-links">
+                  <li className="social-link">
+                    <FaTwitter />
+                  </li>
+                  <li className="social-link">
+                    <FaFacebookF />
+                  </li>
+                  <li className="social-link">
+                    <FaLinkedinIn />
+                  </li>
+                </ul>
 
               </article>
             </a>
