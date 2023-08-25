@@ -16,6 +16,7 @@ const AllReservations = () => {
   const handleDelete = (id) => {
     dispatch(deleteReservation(id));
   };
+
   return (
     <div>
       <h2>Reservations</h2>
@@ -28,7 +29,11 @@ const AllReservations = () => {
             return (
               <li key={reservation.id}>
                 <div>
-                  <img src={doctor.image_url} alt={doctor.name} style={{ width: '100px' }} />
+                  {doctor ? (
+                    <img src={doctor.image_url} alt={doctor.name} style={{ width: '100px' }} />
+                  ) : (
+                    <p>No image available</p>
+                  )}
                 </div>
                 <div>
                   Doctor Name:
@@ -38,7 +43,7 @@ const AllReservations = () => {
                   <br />
                   Specialisation:
                   {' '}
-                  {doctor.specialisation}
+                  {doctor ? doctor.specialisation : 'Unknown'}
                   ,
                   <br />
                   Appointment date:
