@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import SplashPage from "./components/SplashPage";
-import RegistrationForm from "./components/session/RegistrationForm";
-import LoginForm from "./components/session/LoginForm";
-import HomePage from "./components/HomePage";
-import AddItemForm from "./components/AddItemForm";
-import AllReservations from "./components/AllReservations";
-import { fetchAllReservations } from "./redux/reservations/reservationsSlice";
-import DoctorDetails from "./components/DoctorDetails";
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import SplashPage from './components/SplashPage';
+import RegistrationForm from './components/session/RegistrationForm';
+import LoginForm from './components/session/LoginForm';
+import HomePage from './components/HomePage';
+import AddItemForm from './components/AddItemForm';
+import AllReservations from './components/AllReservations';
+import { fetchAllReservations } from './redux/reservations/reservationsSlice';
+import DoctorDetails from './components/DoctorDetails';
 
 function App() {
   const dispatch = useDispatch();

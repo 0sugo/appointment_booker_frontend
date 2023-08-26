@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-import { fetchDoctors } from "../redux/doctors/doctorSlice";
+import React, { useEffect, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { fetchDoctors } from '../redux/doctors/doctorSlice';
 
 const AllDoctors = () => {
   const allDoctors = useSelector((state) => state.doctors.allDoctors);
@@ -53,8 +53,16 @@ const AllDoctors = () => {
                   ))}
                 </div>
                 <p className="each_doc_spec">
-                  Specializes in {eachDoctor.specialisation} and currently
-                  practicing in {eachDoctor.city} city
+                  Specializes in
+                  {' '}
+                  {eachDoctor.specialisation}
+                  {' '}
+                  and currently
+                  practicing in
+                  {' '}
+                  {eachDoctor.city}
+                  {' '}
+                  city
                 </p>
 
                 <ul className="social-links">
