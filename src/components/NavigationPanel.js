@@ -1,24 +1,43 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import {
+  FaFacebookF, FaTwitter, FaLinkedinIn,
+} from 'react-icons/fa';
+import LogoutButton from './session/LogoutButton';
 
 const NavigationPanel = () => (
-  <nav>
-    <Link to="/homepage">Doctors</Link>
-    <br />
+  <navbar className='Navbar'>
+    <h4 className="nav_h4">Doctors Appointment</h4>
 
-    {localStorage.getItem('userData') && (
-    <>
-      <Link to="/add-item">Reserve form</Link>
-    </>
-    )}
+    <nav>
+      <NavLink to="/homepage" className="each_nav">Doctors</NavLink>
 
-    <br />
+      <NavLink to="/homepage" className="each_nav">Add Doctors</NavLink>
+      <NavLink to="/homepage" className="each_nav">Delete Doctors</NavLink>
+      {localStorage.getItem('userData') && (
+      <>
+        <NavLink to="/add-item" className="each_nav">Reserve form</NavLink>
+      </>
+      )}
 
-    <Link to="/all-reservations">All Reservations</Link>
+      <NavLink to="/all-reservations" className="each_nav">All Reservations</NavLink>
 
-    {/* Please kindly add links to your components */}
+      <LogoutButton />
 
-  </nav>
+    </nav>
+
+    <ul className="social-links nav_social_links">
+      <li className="social-link">
+        <FaTwitter />
+      </li>
+      <li className="social-link">
+        <FaFacebookF />
+      </li>
+      <li className="social-link">
+        <FaLinkedinIn />
+      </li>
+    </ul>
+  </navbar>
 );
 
 export default NavigationPanel;

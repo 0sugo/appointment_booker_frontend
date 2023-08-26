@@ -10,7 +10,7 @@ const LogoutButton = () => {
   };
 
   return (
-    <button type="button" onClick={NavigateToSplashPage}>
+    <button type="button" onClick={NavigateToSplashPage} className="logout_btn">
       Logout
     </button>
   );

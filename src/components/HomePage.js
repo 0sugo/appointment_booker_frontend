@@ -3,13 +3,13 @@ import NavigationPanel from './NavigationPanel';
 import AllDoctors from './AllDoctors';
 
 const HomePage = () => (
-  <div>
-    <div>
+  <div className="homepage_flex">
+    <div className="desk_nav">
       <NavigationPanel />
     </div>
-    <div>
+    <section className="doctors_div">
       <AllDoctors />
-    </div>
+    </section>
   </div>
 );
 
