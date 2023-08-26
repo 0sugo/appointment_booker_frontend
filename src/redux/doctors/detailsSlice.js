@@ -1,38 +1,38 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
-const baseURL = 'http://localhost:4000/api/v1/';
+const baseURL = "http://localhost:4000/api/v1/";
 const initialState = {
   doctorDetails: {},
   isLoading: false,
-  error: '',
+  error: "",
 };
 
 export const fetchDoctorDetails = createAsyncThunk(
-  'fetch/doctorDetails',
+  "fetch/doctorDetails",
   async (id, { rejectWithValue }) => {
     try {
       const response = await axios.get(`${baseURL}/doctors/${id}`);
       return response.data;
     } catch (err) {
-      return rejectWithValue(err?.message || 'Something went wrong');
+      return rejectWithValue(err?.message || "Something went wrong");
     }
-  },
+  }
 );
 
 const detailSlice = createSlice({
-  name: 'details',
+  name: "details",
   initialState,
   extraReducers: (builder) => {
     builder
       .addCase(fetchDoctorDetails.fulfilled, (state, { payload }) => {
         state.isLoading = false;
-        state.error = '';
+        state.error = "";
         state.doctorDetails = payload;
       })
       .addCase(fetchDoctorDetails.pending, (state) => {
         state.isLoading = true;
-        state.error = '';
+        state.error = "";
         state.doctorDetails = {};
       })
       .addCase(fetchDoctorDetails.rejected, (state, { payload }) => {
