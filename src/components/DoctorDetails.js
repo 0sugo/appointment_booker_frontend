@@ -24,8 +24,11 @@ const DoctorDetails = () => {
     <div className="details-container">
       <div className="doc-img-container">
         {data?.image_url && (
-          <img src={data?.image_url} alt={`${data?.name} picture`} />
+          <img src={data?.image_url} alt={`${data?.name} pic`} />
         )}
+        <button type="button" className="prev_btn">
+          &lt;
+        </button>
       </div>
       {data && <DetailsTable detailsData={data} />}
     </div>

@@ -1,8 +1,12 @@
-import React from "react";
+import "../styles/details-table.css";
 
 const DetailsTable = ({ detailsData }) => {
   return (
     <div className="table-container">
+      <div className="title">
+        <h2>{detailsData.name}</h2>
+        <p>- $50 Pre-Payment on Reservation</p>
+      </div>
       <table>
         <tbody>
           <tr>
@@ -23,7 +27,7 @@ const DetailsTable = ({ detailsData }) => {
           </tr>
           <tr>
             <td>Duration</td>
-            <td>Per Hour</td>
+            <td>1 Hour</td>
           </tr>
         </tbody>
       </table>
