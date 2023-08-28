@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import {
   FaFacebookF, FaTwitter, FaLinkedinIn,
 } from 'react-icons/fa';
-import LogoutButton from './session/LogoutButton';
+import LogoutButton from '../session/LogoutButton';
 
 const NavigationPanel = () => (
   <div className="Navbar">

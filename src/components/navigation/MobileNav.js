@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdCancel } from 'react-icons/md';
-import LogoutButton from './session/LogoutButton';
+import LogoutButton from '../session/LogoutButton';
 
 const MobileNav = () => {
   const [menuOpen, menuOpenState] = useState(false);

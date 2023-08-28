@@ -1,7 +1,7 @@
 import React from 'react';
-import NavigationPanel from './NavigationPanel';
+import NavigationPanel from './navigation/NavigationPanel';
 import AllDoctors from './AllDoctors';
-import MobileNav from './MobileNav';
+import MobileNav from './navigation/MobileNav';
 
 const HomePage = () => (
   <div className="homepage_flex">
