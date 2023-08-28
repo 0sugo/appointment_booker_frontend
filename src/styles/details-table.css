@@ -3,11 +3,13 @@
   flex-direction: column;
   align-items: flex-end;
   align-self: flex-start;
+  justify-self: flex-end;
+  width: 60%;
+  gap: 1.4rem;
 }
 
 .title {
   text-align: end;
-  margin-bottom: 1rem;
 }
 
 .title p {
@@ -15,7 +17,7 @@
 }
 
 .table-container table {
-  width: 60%;
+  width: 100%;
   border-spacing: 0;
 }
 
@@ -30,4 +32,18 @@
 
 .table-container tr:nth-child(odd) {
   background-color: #e2e3e5;
+}
+
+.reserve-btn {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  background-color: #9acd32;
+  padding: 0.6rem 0.7rem;
+  border: none;
+  border-radius: 1.3rem;
+  color: #fff;
+  font-size: 15px;
+  align-self: center;
+  margin-top: 1rem;
 }

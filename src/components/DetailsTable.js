@@ -1,5 +1,6 @@
-import PropTypes from 'prop-types';
-import '../styles/details-table.css';
+import PropTypes from "prop-types";
+import "../styles/details-table.css";
+import { AiOutlineRightCircle } from "react-icons/ai";
 
 const DetailsTable = ({ detailsData }) => (
   <div className="table-container">
@@ -31,6 +32,10 @@ const DetailsTable = ({ detailsData }) => (
         </tr>
       </tbody>
     </table>
+    <button className="reserve-btn">
+      Reserve
+      <AiOutlineRightCircle fontSize={"19px"} />
+    </button>
   </div>
 );
 

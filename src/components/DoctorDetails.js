@@ -1,15 +1,16 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useParams } from "react-router";
 import {
   doctorDetailsSelector,
   fetchDoctorDetails,
-} from '../redux/doctors/detailsSlice';
-import DetailsTable from './DetailsTable';
-import '../styles/doctor-details.css';
+} from "../redux/doctors/detailsSlice";
+import DetailsTable from "./DetailsTable";
+import "../styles/doctor-details.css";
 
 const DoctorDetails = () => {
   const dispatch = useDispatch();
+  const naviagte = useNavigate();
   const {
     doctorDetails: { data },
   } = useSelector(doctorDetailsSelector);
@@ -23,7 +24,7 @@ const DoctorDetails = () => {
         {data?.image_url && (
           <img src={data?.image_url} alt={`${data?.name} pic`} />
         )}
-        <button type="button" className="prev_btn">
+        <button type="button" onClick={() => naviagte(-1)} className="prev_btn">
           &lt;
         </button>
       </div>
