@@ -152,11 +152,64 @@ a {
     width: 100%;
     height: 250px;
   }
+
+  .homepage_flex {
+    justify-content: center;
+  }
+
+  .desk_nav {
+    display: none;
+  }
+
+  .doctors_div {
+    width: 100%;
+  }
+
+  .mobile_nav {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+  }
+
+  .mobile_menu {
+    display: none;
+  }
+
+  .mobile_menu.open {
+    display: block;
+    height: 100vh;
+    width: 100vh;
+    background-color: #9acd32;
+    margin: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  .hamburger {
+    background-color: #fff;
+    border: none;
+    font-size: 25px;
+    margin-top: 50%;
+    margin-left: 50%;
+  }
+
+  .close_menu {
+    background-color: #9acd32;
+    border: none;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+}
+
+.mobile_nav {
+  display: none;
 }
 
 .Navbar {
   height: 100%;
-  /* padding: 5% 0; */
 }
 
 .logout_btn {

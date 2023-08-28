@@ -6,7 +6,7 @@ import {
 import LogoutButton from './session/LogoutButton';
 
 const NavigationPanel = () => (
-  <navbar className='Navbar'>
+  <div className="Navbar">
     <h4 className="nav_h4">Doctors Appointment</h4>
 
     <nav>
@@ -37,7 +37,7 @@ const NavigationPanel = () => (
         <FaLinkedinIn />
       </li>
     </ul>
-  </navbar>
+  </div>
 );
 
 export default NavigationPanel;
