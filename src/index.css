@@ -170,7 +170,6 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-
   }
 
   .mobile_menu {
@@ -180,7 +179,7 @@ a {
   .mobile_menu.open {
     display: block;
     height: 100vh;
-    width: 100vh;
+    width: 100vw;
     background-color: #9acd32;
     margin: 0;
     position: absolute;
@@ -202,6 +201,14 @@ a {
     margin-top: 30px;
     margin-left: 20px;
   }
+
+  .each_nav:hover {
+    color: #fff;
+  }
+
+  .logout_btn {
+    background-color: #9acd32 !important;
+  }
 }
 
 .mobile_nav {
@@ -219,12 +226,11 @@ a {
   background-color: #fff;
   text-align: start;
   border: none;
-
 }
 
 .logout_btn:hover {
   background-color: red;
-  color: #fff ;
+  color: #fff;
 }
 
 .nav_h4 {
@@ -246,7 +252,7 @@ nav {
 }
 
 .each_nav {
-  padding: 10px 0px;
+  padding: 10px 0;
 }
 
 .each_nav:hover {
