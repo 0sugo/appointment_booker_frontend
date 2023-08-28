@@ -87,7 +87,7 @@ const LoginForm = () => {
 
       {loginFailure && (
       <div>
-        <p>Invalid email or password.</p>
+        <p className="login_error">Invalid email or password.</p>
       </div>
       )}
     </div>
