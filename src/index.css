@@ -213,7 +213,8 @@ a {
     background-color: #9acd32 !important;
   }
 
-  .splash_page, .regis_page {
+  .splash_page,
+  .regis_page {
     width: 90% !important;
     margin: auto;
   }
@@ -286,7 +287,8 @@ input {
   box-shadow: 5px 5px 5px #9acd32;
 }
 
-.reg_error, .login_error {
+.reg_error,
+.login_error {
   margin: 0;
   color: red;
 }
@@ -301,7 +303,6 @@ input {
 .reg_success {
   display: flex;
   flex-direction: column;
-  
 }
 
 /* Navigation */
