@@ -13,11 +13,11 @@ const MobileNav = () => {
 
   return (
     <div className="mobile_nav">
-      <button className="hamburger" onClick={toggleMenu} type="button">
+      <button data-testid="hamburger" className="hamburger" onClick={toggleMenu} type="button">
         <GiHamburgerMenu />
       </button>
 
-      <nav className={`mobile_menu ${menuOpen ? 'open' : ''}`}>
+      <nav data-testid="mobile_menu" className={`mobile_menu ${menuOpen ? 'open' : ''}`}>
         <button onClick={toggleMenu} type="button" className="close_menu">
           <MdCancel />
         </button>
