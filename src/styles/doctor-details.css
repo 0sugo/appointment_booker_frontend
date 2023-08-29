@@ -2,7 +2,6 @@
   display: grid;
   gap: 1rem;
   min-height: 100vh;
-  height: 100dvh;
   grid-template-columns: 1fr 1fr;
   place-content: center;
   padding: 0.7rem 2rem;
