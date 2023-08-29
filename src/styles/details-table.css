@@ -1,0 +1,49 @@
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: flex-start;
+  justify-self: flex-end;
+  width: 60%;
+  gap: 1.4rem;
+}
+
+.title {
+  text-align: end;
+}
+
+.title p {
+  font-size: 13px;
+}
+
+.table-container table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.table-container td {
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+.table-container tr {
+  padding: 0.5rem 1rem;
+}
+
+.table-container tr:nth-child(odd) {
+  background-color: #e2e3e5;
+}
+
+.reserve-btn {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  background-color: #9acd32;
+  padding: 0.6rem 0.7rem;
+  border: none;
+  border-radius: 1.3rem;
+  color: #fff;
+  font-size: 15px;
+  align-self: center;
+  margin-top: 1rem;
+}
