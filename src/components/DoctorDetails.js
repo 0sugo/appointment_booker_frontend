@@ -10,7 +10,7 @@ import "../styles/doctor-details.css";
 
 const DoctorDetails = () => {
   const dispatch = useDispatch();
-  const naviagte = useNavigate();
+  const navigate = useNavigate();
   const {
     doctorDetails: { data },
   } = useSelector(doctorDetailsSelector);
@@ -18,13 +18,14 @@ const DoctorDetails = () => {
   useEffect(() => {
     dispatch(fetchDoctorDetails(id));
   }, [id]);
+
   return (
     <div className="details-container">
       <div className="doc-img-container">
         {data?.image_url && (
           <img src={data?.image_url} alt={`${data?.name} pic`} />
         )}
-        <button type="button" onClick={() => naviagte(-1)} className="prev_btn">
+        <button type="button" onClick={() => navigate(-1)} className="prev_btn">
           &lt;
         </button>
       </div>
