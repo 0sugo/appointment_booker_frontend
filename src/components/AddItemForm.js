@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useLocation } from 'react-router';
 import {
   addReservation,
   fetchAllDoctors,
-} from "../redux/reservations/reservationsSlice";
-import { useLocation } from "react-router";
+} from '../redux/reservations/reservationsSlice';
 
 const AddItemForm = () => {
   const dispatch = useDispatch();
   const location = useLocation();
-  const [doctorId, setDoctorId] = useState("");
-  const [date, setDate] = useState("");
-  const [city, setCity] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
+  const [doctorId, setDoctorId] = useState('');
+  const [date, setDate] = useState('');
+  const [city, setCity] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
   const doctors = useSelector((state) => state.reservations.doctors);
   useEffect(() => {
     dispatch(fetchAllDoctors());
@@ -23,16 +23,16 @@ const AddItemForm = () => {
 
     try {
       await dispatch(addReservation({ doctorId, date, city }));
-      setSuccessMessage("Reservation added successfully");
-      setDoctorId("");
-      setDate("");
-      setCity("");
+      setSuccessMessage('Reservation added successfully');
+      setDoctorId('');
+      setDate('');
+      setCity('');
     } catch (error) {
-      setSuccessMessage("Error adding reservation");
+      setSuccessMessage('Error adding reservation');
     }
 
     setTimeout(() => {
-      setSuccessMessage("");
+      setSuccessMessage('');
     }, 3000);
   };
 
@@ -44,7 +44,7 @@ const AddItemForm = () => {
           Doctor:
           <select
             value={location.state ? location.state?.id : doctorId}
-            disabled={location.state ? true : false}
+            disabled={!!location.state}
             onChange={(e) => setDoctorId(e.target.value)}
           >
             <option value="">Select a doctor</option>

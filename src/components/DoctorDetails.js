@@ -1,12 +1,12 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router";
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate, useParams } from 'react-router';
 import {
   doctorDetailsSelector,
   fetchDoctorDetails,
-} from "../redux/doctors/detailsSlice";
-import DetailsTable from "./DetailsTable";
-import "../styles/doctor-details.css";
+} from '../redux/doctors/detailsSlice';
+import DetailsTable from './DetailsTable';
+import '../styles/doctor-details.css';
 
 const DoctorDetails = () => {
   const dispatch = useDispatch();

@@ -1,12 +1,12 @@
-import PropTypes from "prop-types";
-import "../styles/details-table.css";
-import { AiOutlineRightCircle } from "react-icons/ai";
-import { useNavigate } from "react-router";
+import PropTypes from 'prop-types';
+import '../styles/details-table.css';
+import { AiOutlineRightCircle } from 'react-icons/ai';
+import { useNavigate } from 'react-router';
 
 const DetailsTable = ({ detailsData }) => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/add-item", { replace: true, state: detailsData });
+    navigate('/add-item', { replace: true, state: detailsData });
   };
 
   return (
@@ -39,9 +39,9 @@ const DetailsTable = ({ detailsData }) => {
           </tr>
         </tbody>
       </table>
-      <button onClick={handleClick} className="reserve-btn">
+      <button onClick={handleClick} type="button" className="reserve-btn">
         Reserve
-        <AiOutlineRightCircle fontSize={"19px"} />
+        <AiOutlineRightCircle fontSize="19px" />
       </button>
     </div>
   );
