@@ -100,7 +100,6 @@ const AllReservations = () => {
   const isScrollableLeft = scrollX > -(reservations.length - 3) * 300;
 
   return (
-
     <div className="homepage_flex">
       <div className="desk_nav">
         <NavigationPanel />
