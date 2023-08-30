@@ -33,36 +33,41 @@ const AddItemForm = () => {
   };
 
   return (
-    <>
-      <div>AddItemForm</div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="doctorId">
-          Doctor:
-          <select value={doctorId} onChange={(e) => setDoctorId(e.target.value)}>
-            <option value="">Select a doctor</option>
-            {doctors.map((doctor) => (
-              <option key={doctor.id} value={doctor.id}>
-                {doctor.name}
-              </option>
-            ))}
-          </select>
-        </label>
-        <br />
-        <label htmlFor="date">
-          Date:
-          <input type="datetime-local" value={date} onChange={(e) => setDate(e.target.value)} placeholder="Choose date" />
-        </label>
-        <br />
-        <label htmlFor="city">
-          City:
-          <input type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="Choose city" />
-        </label>
-        <br />
-        <button type="submit">Add Item</button>
+    <div className="container">
+      <div className="overlay">
+        <div className="form-container flexer">
+          <div className="hero-reserve">
+            <h3>RESERVE AN APPOINTMENT</h3>
+            <hr />
+            <p>
+              Welcome to Doctors reservation section.
+              Here you are going to pick a doctor,city
+              and the specific date for the appointment
+              {' '}
+            </p>
+          </div>
+          <form className="form-reserve flexer" onSubmit={handleSubmit}>
+            <input type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="Enter city" required />
+            <input type="datetime-local" value={date} onChange={(e) => setDate(e.target.value)} placeholder="Choose date" required />
+            <div className="flexer abs">
+              <select value={doctorId} onChange={(e) => setDoctorId(e.target.value)} required>
+                <option value="">Select a doctor</option>
+                {doctors.map((doctor) => (
+                  <option key={doctor.id} value={doctor.id}>
+                    {doctor.name}
+                  </option>
+                ))}
+              </select>
+              <button type="submit">Book now</button>
+            </div>
 
-      </form>
-      {successMessage && <div>{successMessage}</div>}
-    </>
+          </form>
+          {successMessage && <div className="output">{successMessage}</div>}
+
+        </div>
+
+      </div>
+    </div>
   );
 };
 
