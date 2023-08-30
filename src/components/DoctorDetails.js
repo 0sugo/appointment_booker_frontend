@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router-dom';
 import {
   doctorDetailsSelector,
   fetchDoctorDetails,
@@ -15,9 +15,10 @@ const DoctorDetails = () => {
     doctorDetails: { data },
   } = useSelector(doctorDetailsSelector);
   const { id } = useParams();
+
   useEffect(() => {
     dispatch(fetchDoctorDetails(id));
-  }, [id]);
+  }, [dispatch, id]);
 
   return (
     <div className="details-container">
@@ -29,7 +30,11 @@ const DoctorDetails = () => {
           &lt;
         </button>
       </div>
-      {data && <DetailsTable detailsData={data} />}
+      {data && (
+        <div className="table-container">
+          <DetailsTable detailsData={data} />
+        </div>
+      )}
     </div>
   );
 };
