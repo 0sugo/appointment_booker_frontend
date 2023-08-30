@@ -47,11 +47,12 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div>
+    <div className="regis_page">
       <h2>Register</h2>
       {registrationSuccess ? (
-        <div>
+        <div className="reg_success">
           <p>Registration successful! You can now log in.</p>
+          <Link to="/login" className="splash_link">Login</Link>
         </div>
       ) : (
         <form onSubmit={handleSubmit}>
@@ -66,8 +67,9 @@ const RegistrationForm = () => {
             />
           </label>
           {registrationFailure && errorData && errorData.name && (
-            <p>
+            <p className="reg_error">
               Name
+              {' '}
               {errorData.name[0]}
             </p>
           )}
@@ -83,8 +85,9 @@ const RegistrationForm = () => {
             />
           </label>
           {registrationFailure && errorData && errorData.email && (
-            <p>
+            <p className="reg_error">
               Email
+              {' '}
               {errorData.email[0]}
             </p>
           )}
@@ -101,8 +104,9 @@ const RegistrationForm = () => {
           </label>
 
           {registrationFailure && errorData && errorData.password && (
-            <p>
+            <p className="reg_error">
               Password
+              {' '}
               {errorData.password[0]}
             </p>
           )}
@@ -118,16 +122,20 @@ const RegistrationForm = () => {
             />
           </label>
           {registrationFailure && errorData && errorData.password_confirmation && (
-            <p>
+            <p className="reg_error">
               Password
+              {' '}
               {errorData.password_confirmation[0]}
             </p>
           )}
           <br />
-          <button type="submit">Register</button>
+          <div className="reg_btns">
+            <button type="submit" className="splash_link login_btn">Register</button>
+            <Link to="/login" className="splash_link">Login</Link>
+          </div>
         </form>
       )}
-      <Link to="/login">Login</Link>
+
     </div>
   );
 };
