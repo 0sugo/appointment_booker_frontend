@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  FaFacebookF, FaTwitter, FaLinkedinIn,
-} from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 import { fetchDoctors } from '../redux/doctors/doctorSlice';
 
 const AllDoctors = () => {
@@ -37,14 +35,14 @@ const AllDoctors = () => {
       </div>
 
       <div className="homepage_content">
-        <button type="button" onClick={scrollLeft} className="prev_btn">&lt;</button>
+        <button type="button" onClick={scrollLeft} className="prev_btn">
+          &lt;
+        </button>
 
         <section className="allDoctors" ref={doctorsContainerRef}>
-
           {allDoctors.map((eachDoctor) => (
-            <a href={`/doctordetails/${eachDoctor.id}`} key={eachDoctor.id}>
+            <a href={`/doctor-details/${eachDoctor.id}`} key={eachDoctor.id}>
               <article className="eachDoctor">
-
                 <div className="img_div">
                   <img src={eachDoctor.image_url} alt={eachDoctor.name} />
                 </div>
@@ -59,7 +57,8 @@ const AllDoctors = () => {
                   {' '}
                   {eachDoctor.specialisation}
                   {' '}
-                  and currently practicing in
+                  and currently
+                  practicing in
                   {' '}
                   {eachDoctor.city}
                   {' '}
@@ -77,14 +76,14 @@ const AllDoctors = () => {
                     <FaLinkedinIn />
                   </li>
                 </ul>
-
               </article>
             </a>
           ))}
         </section>
-        <button type="button" onClick={scrollRight} className="next_btn">&gt;</button>
+        <button type="button" onClick={scrollRight} className="next_btn">
+          &gt;
+        </button>
       </div>
-
     </div>
   );
 };
