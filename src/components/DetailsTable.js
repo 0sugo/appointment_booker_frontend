@@ -1,3 +1,4 @@
+/*eslint-disable */
 import PropTypes from 'prop-types';
 import '../styles/details-table.css';
 import { AiOutlineRightCircle } from 'react-icons/ai';
@@ -6,8 +7,16 @@ import { useNavigate } from 'react-router';
 const DetailsTable = ({ detailsData }) => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate('/add-item', { replace: true, state: detailsData });
+    navigate('/add-item', {
+      replace: true,
+      state: {
+        doctorId: detailsData.id,
+        detailsData: detailsData,
+      },
+    });
   };
+
+
 
   return (
     <div className="table-container">
