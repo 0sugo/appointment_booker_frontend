@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addReservation, fetchAllDoctors } from '../redux/reservations/reservationsSlice';
+import { useLocation } from 'react-router';
+import {
+  addReservation,
+  fetchAllDoctors,
+} from '../redux/reservations/reservationsSlice';
 
 const AddItemForm = () => {
   const dispatch = useDispatch();
+  const location = useLocation();
   const [doctorId, setDoctorId] = useState('');
   const [date, setDate] = useState('');
   const [city, setCity] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const doctors = useSelector((state) => state.reservations.doctors);
-
   useEffect(() => {
     dispatch(fetchAllDoctors());
   }, [dispatch]);
