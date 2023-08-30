@@ -185,7 +185,7 @@ a {
     display: block;
     height: 100vh;
     width: 100vw;
-    background-color: #9acd32;
+    background-color: #ebede7;
     margin: 0;
     position: absolute;
     top: 0;
@@ -200,7 +200,7 @@ a {
   }
 
   .close_menu {
-    background-color: #9acd32;
+    background-color: #ebede7;
     border: none;
     font-size: 25px;
     margin-top: 30px;
@@ -212,7 +212,7 @@ a {
   }
 
   .logout_btn {
-    background-color: #9acd32 !important;
+    background-color: #ebede7 !important;
   }
 
   .splash_page,
