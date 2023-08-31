@@ -131,7 +131,7 @@ a {
   border-radius: 2px;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
   /* homepage */
   .homepage_content {
     justify-content: center;
@@ -361,7 +361,7 @@ nav {
   box-shadow: 10px 10px 15px rgba(6, 2, 2, 0.2);
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .doctors_div {
     width: 80%;
   }
