@@ -35,7 +35,7 @@ const AllReservations = () => {
   };
 
   const isScrollableRight = scrollX < 0;
-  const isScrollableLeft = scrollX > -(reservations.length - 1) * 203;
+  const isScrollableLeft = scrollX > -(reservations.length - 1) * 213;
 
   return (
     <div className="homepage_flex">
