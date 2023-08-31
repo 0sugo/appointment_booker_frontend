@@ -45,3 +45,8 @@
   width: 100%;
   object-fit: cover;
 }
+@media screen and (max-width: 768px) {
+  .details-container {
+    grid-template-columns: 1fr;
+  }
+}
