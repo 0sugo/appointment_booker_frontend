@@ -9,21 +9,19 @@ const AllDoctors = () => {
   const doctorsContainerRef = useRef(null);
 
   useEffect(() => {
-    if (allDoctors.length === 0) {
-      dispatch(fetchDoctors());
-    }
-  }, [dispatch, allDoctors.length]);
+    dispatch(fetchDoctors());
+  }, [dispatch]);
 
   const scrollLeft = () => {
-    doctorsContainerRef.current.scrollLeft -= 300;
+    doctorsContainerRef.current.scrollLeft -= 150;
   };
 
   const scrollRight = () => {
-    doctorsContainerRef.current.scrollLeft += 300;
+    doctorsContainerRef.current.scrollLeft += 150;
   };
 
   return (
-    <div className="home">
+    <div className="home flexer">
       <div className="home_header">
         <h2>Available Doctors</h2>
         <p>Please select a doctor to book an appointment with</p>
