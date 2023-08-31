@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import { CreateDoctor } from "../service/doctorsService";
-import { useNavigate } from "react-router";
-import NavigationPanel from "./navigation/NavigationPanel";
-import MobileNav from "./navigation/MobileNav";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
+import { CreateDoctor } from '../service/doctorsService';
+import NavigationPanel from './navigation/NavigationPanel';
+import MobileNav from './navigation/MobileNav';
 
 const AddDoctor = () => {
-  const [name, setName] = useState("");
-  const [specialisation, setSpecialisation] = useState("");
-  const [city, setCity] = useState("");
-  const [price, setPrice] = useState("");
-  const [duration, setDuration] = useState("");
-  const [imgURL, setImgURL] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
+  const [name, setName] = useState('');
+  const [specialisation, setSpecialisation] = useState('');
+  const [city, setCity] = useState('');
+  const [price, setPrice] = useState('');
+  const [duration, setDuration] = useState('');
+  const [imgURL, setImgURL] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
@@ -27,13 +27,13 @@ const AddDoctor = () => {
         image_url: imgURL,
       });
       setSuccessMessage(response);
-      navigate("/homepage", { replace: true });
+      navigate('/homepage', { replace: true });
     } catch (error) {
-      setSuccessMessage("Failed saving entry");
+      setSuccessMessage('Failed saving entry');
     }
 
     setTimeout(() => {
-      setSuccessMessage("");
+      setSuccessMessage('');
     }, 3000);
   };
 

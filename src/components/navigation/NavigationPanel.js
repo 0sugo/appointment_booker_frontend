@@ -1,7 +1,7 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-import LogoutButton from "../session/LogoutButton";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import LogoutButton from '../session/LogoutButton';
 
 const NavigationPanel = () => (
   <div className="Navbar">
@@ -12,7 +12,7 @@ const NavigationPanel = () => (
         Doctors
       </NavLink>
 
-      {localStorage.getItem("userData") && (
+      {localStorage.getItem('userData') && (
         <>
           <NavLink to="/add-doctor" className="each_nav">
             Add Doctors

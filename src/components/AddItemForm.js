@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   addReservation,
   fetchAllDoctors,
-} from "../redux/reservations/reservationsSlice";
-import NavigationPanel from "./navigation/NavigationPanel";
-import MobileNav from "./navigation/MobileNav";
+} from '../redux/reservations/reservationsSlice';
+import NavigationPanel from './navigation/NavigationPanel';
+import MobileNav from './navigation/MobileNav';
 
 const AddItemForm = () => {
   const dispatch = useDispatch();
-  const [doctorId, setDoctorId] = useState("");
-  const [date, setDate] = useState("");
-  const [city, setCity] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
+  const [doctorId, setDoctorId] = useState('');
+  const [date, setDate] = useState('');
+  const [city, setCity] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
   const doctors = useSelector((state) => state.reservations.doctors);
   const location = useLocation();
   const { doctorId: initialDoctorId } = location.state || {};
@@ -30,16 +30,16 @@ const AddItemForm = () => {
 
     try {
       await dispatch(addReservation({ doctorId, date, city }));
-      setSuccessMessage("Reservation added successfully");
-      setDoctorId("");
-      setDate("");
-      setCity("");
+      setSuccessMessage('Reservation added successfully');
+      setDoctorId('');
+      setDate('');
+      setCity('');
     } catch (error) {
-      setSuccessMessage("Error adding reservation");
+      setSuccessMessage('Error adding reservation');
     }
 
     setTimeout(() => {
-      setSuccessMessage("");
+      setSuccessMessage('');
     }, 3000);
   };
 
@@ -59,7 +59,8 @@ const AddItemForm = () => {
                   <p>
                     Welcome to Doctors reservation section. Here you are going
                     to pick a doctor,city and the specific date for the
-                    appointment{" "}
+                    appointment
+                    {' '}
                   </p>
                 </div>
                 <form className="form-reserve flexer" onSubmit={handleSubmit}>

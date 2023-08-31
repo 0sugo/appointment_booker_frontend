@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { MdCancel } from "react-icons/md";
-import LogoutButton from "../session/LogoutButton";
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { MdCancel } from 'react-icons/md';
+import LogoutButton from '../session/LogoutButton';
 
 const MobileNav = () => {
   const [menuOpen, menuOpenState] = useState(false);
@@ -24,7 +24,7 @@ const MobileNav = () => {
 
       <nav
         data-testid="mobile_menu"
-        className={`mobile_menu ${menuOpen ? "open" : ""}`}
+        className={`mobile_menu ${menuOpen ? 'open' : ''}`}
       >
         <button onClick={toggleMenu} type="button" className="close_menu">
           <MdCancel />
@@ -34,7 +34,7 @@ const MobileNav = () => {
             Doctors
           </NavLink>
 
-          {localStorage.getItem("userData") && (
+          {localStorage.getItem('userData') && (
             <>
               <NavLink to="/add-doctor" className="each_nav">
                 Add Doctors

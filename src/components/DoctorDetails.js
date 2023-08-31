@@ -1,18 +1,18 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate, useParams } from 'react-router-dom';
 import {
   doctorDetailsSelector,
   fetchDoctorDetails,
-} from "../redux/doctors/detailsSlice";
-import DetailsTable from "./DetailsTable";
-import "../styles/doctor-details.css";
-import { deleteDoctor } from "../service/doctorsService";
+} from '../redux/doctors/detailsSlice';
+import DetailsTable from './DetailsTable';
+import '../styles/doctor-details.css';
+import { deleteDoctor } from '../service/doctorsService';
 
 const DoctorDetails = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [notice, setNotice] = useState("");
+  const [notice, setNotice] = useState('');
   const {
     doctorDetails: { data },
   } = useSelector(doctorDetailsSelector);
@@ -22,8 +22,8 @@ const DoctorDetails = () => {
     const messge = await deleteDoctor(id);
     setNotice(messge);
     setTimeout(() => {
-      setNotice("");
-      navigate("/homepage", { replace: true });
+      setNotice('');
+      navigate('/homepage', { replace: true });
     }, 2000);
   };
   useEffect(() => {
