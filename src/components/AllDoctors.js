@@ -9,10 +9,8 @@ const AllDoctors = () => {
   const doctorsContainerRef = useRef(null);
 
   useEffect(() => {
-    if (allDoctors.length === 0) {
-      dispatch(fetchDoctors());
-    }
-  }, [dispatch, allDoctors.length]);
+    dispatch(fetchDoctors());
+  }, [dispatch]);
 
   const scrollLeft = () => {
     doctorsContainerRef.current.scrollLeft -= 300;
