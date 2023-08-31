@@ -1,14 +1,13 @@
-/*eslint-disable */
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   deleteReservation,
   fetchAllDoctors,
   fetchAllReservations,
-} from "../redux/reservations/reservationsSlice";
-import "../reservations.css";
-import NavigationPanel from "./navigation/NavigationPanel";
-import MobileNav from "./navigation/MobileNav";
+} from '../redux/reservations/reservationsSlice';
+import '../reservations.css';
+import NavigationPanel from './navigation/NavigationPanel';
+import MobileNav from './navigation/MobileNav';
 
 const AllReservations = () => {
   const dispatch = useDispatch();
@@ -45,7 +44,7 @@ const AllReservations = () => {
       </div>
       <section className="doctors_div">
         <div className="reserve">
-          <div >
+          <div>
             <h2 className="center">Reservations</h2>
             <hr />
           </div>
@@ -56,7 +55,7 @@ const AllReservations = () => {
                 type="button"
                 onClick={scrollLeft}
               >
-                {"<"}
+                {'<'}
               </button>
             )}
 
@@ -70,7 +69,7 @@ const AllReservations = () => {
                 >
                   {reservations.map((reservation) => {
                     const doctor = doctors.find(
-                      (doc) => doc.id === reservation.doctor_id
+                      (doc) => doc.id === reservation.doctor_id,
                     );
                     return (
                       <li key={reservation.id} className="reservation-card flexer">
@@ -88,14 +87,21 @@ const AllReservations = () => {
                           )}
                         </div>
                         <div className="reservation-details">
-                          <p className="doctor-name">{doctor ? doctor.name : "Unknown"}</p>
+                          <p className="doctor-name">{doctor ? doctor.name : 'Unknown'}</p>
                           <p className="specialisation">
-                            Specialisation: {doctor ? doctor.specialisation : "Unknown"}
+                            Specialisation:
+                            {' '}
+                            {doctor ? doctor.specialisation : 'Unknown'}
                           </p>
                           <p className="appointment-date">
-                            Appointment date: {reservation.date}
+                            Appointment date:
+                            {' '}
+                            {reservation.date}
                           </p>
-                          <p className="city">City of appointment: {reservation.city}</p>
+                          <p className="city">
+                            City of appointment:
+                            {reservation.city}
+                          </p>
                         </div>
 
                         <button
