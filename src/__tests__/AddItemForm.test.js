@@ -11,7 +11,7 @@ test('AddItemForm snapshot', () => {
       <Router>
         <AddItemForm />
       </Router>
-    </Provider>
+    </Provider>,
   );
   expect(asFragment()).toMatchSnapshot();
 });

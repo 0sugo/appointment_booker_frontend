@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
@@ -7,6 +6,7 @@ import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 
 import AllReservations from '../components/AllReservations';
+
 const mockStore = configureStore([thunk]);
 
 test('AllReservations component renders correctly', () => {
@@ -23,7 +23,7 @@ test('AllReservations component renders correctly', () => {
       <MemoryRouter>
         <AllReservations />
       </MemoryRouter>
-    </Provider>
+    </Provider>,
   );
 
   expect(asFragment()).toMatchSnapshot();
