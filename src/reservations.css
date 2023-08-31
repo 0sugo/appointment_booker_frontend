@@ -1,8 +1,6 @@
-/* Reservation form */
-.container {
+.homer {
   min-height: 100vh;
   background: url(../public/reservebg.jpg) center/cover;
-  position: relative;
 }
 
 .flexer {
@@ -11,14 +9,16 @@
 
 .hero-reserve {
   width: 80%;
-  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .overlay {
-  background: rgba(150, 191, 1, 0.7);
+  background: rgba(125, 160, 0, 0.7);
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
 }
@@ -29,36 +29,39 @@
   align-items: center;
   text-align: center;
   min-height: 100vh;
+  width: 100%;
 }
 
 .hero-reserve h3,
 .hero-reserve p {
-  color: #e8eed6;
+  color: #fff;
+  letter-spacing: 0.03em;
+  line-height: 24px;
 }
 
-hr {
-  width: 80%;
-  color: #e8eed6;
+.hero-reserve hr {
+  width: 100%;
+  color: white;
+  margin: 2%;
 }
 
 .form-reserve {
   flex-direction: column;
-  justify-content: center;
+  margin: 5%;
   align-items: center;
-  width: 80%;
+  width: 70%;
   box-sizing: border-box;
 }
 
 .abs {
   width: 100%;
-  flex: 1;
-  gap: 30px;
+  gap: 10px;
 }
 
 .form-reserve button {
   border: none;
   background-color: #e8eed6;
-  color: rgba(150, 191, 1, 0.7);
+  color: rgb(125, 160, 0);
   cursor: pointer;
 }
 
@@ -68,11 +71,19 @@ input {
   color: #e8eed6;
 }
 
-.form-container form select,
-.form-container form input,
-.form-container form button {
+.reservation-card button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.container form select,
+.container form input,
+.container form button {
   border-radius: 20px;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
   margin-bottom: 10px;
   width: 100%;
@@ -83,10 +94,10 @@ input {
   box-sizing: border-box;
 }
 
-/* Style the options */
 .form-container form select option {
-  background-color: white;
-  color: #000;
+  background-color: rgb(125, 160, 0);
+  color: #fff;
+  border: none;
 }
 
 .form-container form input::placeholder,
@@ -98,58 +109,95 @@ input {
   color: #e8eed6;
 }
 
-/* Fetching reservations */
+/* all reservations */
+.reserve {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
 .scroll-container {
   display: flex;
   align-items: center;
   overflow-x: hidden;
-  position: fixed;
-  top: 35%;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%);
-  border: 1px solid red;
-  width: 100%;
+  width: 80%;
+  margin-left: 40%;
   box-sizing: border-box;
-  -webkit-transform: translate(-50%);
-  -moz-transform: translate(-50%);
-  -ms-transform: translate(-50%);
-  -o-transform: translate(-50%);
 }
 
-.each-reservation {
+.all-reservations {
   list-style: none;
   transition: transform 0.3s ease-in-out;
+  gap: 20px;
+}
+
+.all-reservations li:first-child {
+  margin-left: 3%;
 }
 
 .reservation-card {
-  border: 1px solid red;
+  flex-direction: column;
   width: 200px;
-  margin: 0 10px;
+  height: 400px;
+  padding: 15px;
+  margin: 10px 10px;
   box-sizing: border-box;
+}
+
+.doctor-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.doctor-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.no-image {
+  color: #999;
+  font-style: italic;
+}
+
+.doctor-name {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.additional-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.specialisation,
+.appointment-date,
+.city {
+  font-size: 0.8em;
+  margin: 6px 0;
 }
 
 .scroll-button {
   position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-
-  /* background: #e8eed6; */
+  background: #9acd32;
+  color: #fff;
+  font-size: larger;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  width: 13%;
-  height: 20%;
-}
-
-.scroll-button:active {
-  background-color: #9acd32;
-  color: white;
-  transition: background-color 0.2s, color 1.2s;
-  -webkit-transition: background-color 0.2s, color 1.2s;
-  -moz-transition: background-color 0.2s, color 1.2s;
-  -ms-transition: background-color 0.2s, color 1.2s;
-  -o-transition: background-color 0.2s, color 1.2s;
+  top: 40%;
+  z-index: 2;
 }
 
 .left {
@@ -160,8 +208,8 @@ input {
 
 .right {
   right: 0;
-  border-top-left-radius: 40px;
-  border-bottom-left-radius: 40px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 
 .clicked {
@@ -174,13 +222,22 @@ input {
   color: white;
 }
 
+.center {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
 @media screen and (min-width: 768px) {
-  .hero-reserve {
-    width: 70%;
+  .exclusive {
+    margin-left: 10%;
   }
 
   .form-reserve {
-    width: 40%;
+    width: 50%;
+  }
+
+  .overlay {
+    width: 80%;
   }
 
   .form-container {
@@ -192,19 +249,49 @@ input {
     min-height: 100vh;
   }
 
-  hr {
-    width: 40%;
+  .hero-reserve hr {
+    width: 60%;
   }
 
-  /* All reservations */
-  .reservation-card {
-    width: 250px;
-    margin: 0 10px;
-    box-sizing: border-box;
+  .container form input {
+    padding: 18px;
+  }
+
+  .container form select,
+  .container form button {
+    padding: 12px;
+  }
+
+  .scroll-container {
+    width: 100%;
+    margin-left: 32%;
+  }
+
+  .desk_nav {
+    width: 20%;
+    height: 100vh;
+    box-shadow: 10px 10px 15px rgba(6, 2, 2, 0.2);
+    z-index: 10;
   }
 
   .scroll-button {
-    width: 6%;
-    height: 20%;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .left {
+    left: 20%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .scroll-container {
+    width: 100%;
+    margin-left: 20%;
+  }
+
+  .scroll-button {
+    padding: 20px 40px;
+    cursor: pointer;
   }
 }
