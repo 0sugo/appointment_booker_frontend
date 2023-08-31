@@ -68,6 +68,8 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteReservation, fetchAllDoctors, fetchAllReservations } from '../redux/reservations/reservationsSlice';
 import '../reservations.css';
+import NavigationPanel from './navigation/NavigationPanel';
+import MobileNav from './navigation/MobileNav';
 
 const AllReservations = () => {
   const dispatch = useDispatch();
@@ -98,51 +100,62 @@ const AllReservations = () => {
   const isScrollableLeft = scrollX > -(reservations.length - 3) * 300;
 
   return (
-    <div className="reserve">
-      <h2>Reservations</h2>
-      <div className="scroll-container">
-        {isLoading ? (
-          <p>Loading...</p>
-        ) : (
-          <ul className="flexer each-reservation" style={{ transform: `translateX(${scrollX}px)` }}>
-            {reservations.map((reservation) => {
-              const doctor = doctors.find((doc) => doc.id === reservation.doctor_id);
-              return (
-                <li key={reservation.id} className="reservation-card">
-                  <div>
-                    {doctor ? (
-                      <img src={doctor.image_url} alt={doctor.name} style={{ width: '100px' }} />
-                    ) : (
-                      <p>No image available</p>
-                    )}
-                  </div>
-                  <div>
-                    Doctor Name:
-                    {' '}
-                    {doctor ? doctor.name : 'Unknown'}
-                    <br />
-                    Specialisation:
-                    {' '}
-                    {doctor ? doctor.specialisation : 'Unknown'}
-                    <br />
-                    Appointment date:
-                    {' '}
-                    {reservation.date}
-                    <br />
-                    City of appointment:
-                    {' '}
-                    {reservation.city}
-                    <br />
-                  </div>
-                  <button onClick={() => handleDelete(reservation.id)} type="button">delete</button>
-                </li>
-              );
-            })}
-          </ul>
-        )}
-        <button className="scroll-button left" type="button" onClick={scrollLeft} disabled={!isScrollableLeft}>{'<'}</button>
-        <button className="scroll-button right" type="button" onClick={scrollRight} disabled={!isScrollableRight}>{'>'}</button>
+    <div className="homepage_flex">
+      <div className="desk_nav">
+        <NavigationPanel />
       </div>
+      <section className="doctors_div">
+        <div className="reserve">
+          <h2>Reservations</h2>
+          <div className="scroll-container">
+            {isLoading ? (
+              <p>Loading...</p>
+            ) : (
+              <ul className="flexer each-reservation" style={{ transform: `translateX(${scrollX}px)` }}>
+                {reservations.map((reservation) => {
+                  const doctor = doctors.find((doc) => doc.id === reservation.doctor_id);
+                  return (
+                    <li key={reservation.id} className="reservation-card">
+                      <div>
+                        {doctor ? (
+                          <img src={doctor.image_url} alt={doctor.name} style={{ width: '100px' }} />
+                        ) : (
+                          <p>No image available</p>
+                        )}
+                      </div>
+                      <div>
+                        Doctor Name:
+                        {' '}
+                        {doctor ? doctor.name : 'Unknown'}
+                        <br />
+                        Specialisation:
+                        {' '}
+                        {doctor ? doctor.specialisation : 'Unknown'}
+                        <br />
+                        Appointment date:
+                        {' '}
+                        {reservation.date}
+                        <br />
+                        City of appointment:
+                        {' '}
+                        {reservation.city}
+                        <br />
+                      </div>
+                      <button onClick={() => handleDelete(reservation.id)} type="button">delete</button>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+            <button className="scroll-button left" type="button" onClick={scrollLeft} disabled={!isScrollableLeft}>{'<'}</button>
+            <button className="scroll-button right" type="button" onClick={scrollRight} disabled={!isScrollableRight}>{'>'}</button>
+          </div>
+        </div>
+      </section>
+      <div className="mobile_na">
+        <MobileNav />
+      </div>
+
     </div>
   );
 };
