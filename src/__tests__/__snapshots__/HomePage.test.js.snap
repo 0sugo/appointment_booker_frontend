@@ -272,7 +272,7 @@ Object {
                 class="allDoctors"
               >
                 <a
-                  href="/doctordetails/1"
+                  href="/doctor-details/1"
                 >
                   <article
                     class="eachDoctor"
@@ -690,7 +690,7 @@ Object {
               class="allDoctors"
             >
               <a
-                href="/doctordetails/1"
+                href="/doctor-details/1"
               >
                 <article
                   class="eachDoctor"
