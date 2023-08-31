@@ -47,4 +47,3 @@ describe('Homepage', () => {
     expect(homePage).toMatchSnapshot();
   });
 });
-
