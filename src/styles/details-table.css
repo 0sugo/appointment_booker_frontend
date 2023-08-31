@@ -49,12 +49,12 @@
 }
 
 @media screen and (max-width: 768px) {
+  .table-container {
+    align-items: center;
+    width: 100%;
+  }
 
-.table-container {
-  align-items: center;
-  width: 100%;
-}
-.title {
-  text-align: center;
-}
+  .title {
+    text-align: center;
+  }
 }

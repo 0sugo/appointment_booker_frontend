@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.home{
+.home {
   height: 100vh;
   flex-direction: column;
   justify-content: center;
@@ -377,8 +377,7 @@ nav {
 }
 
 @media screen and (min-width: 769px) {
-
-.doctors_div {
-  width: 80%;
-}
+  .doctors_div {
+    width: 80%;
+  }
 }

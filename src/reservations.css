@@ -124,7 +124,6 @@ input {
   align-items: center;
   overflow-x: hidden;
   width: 80%;
-
   margin-left: 40%;
   box-sizing: border-box;
 }
@@ -288,7 +287,6 @@ input {
 @media screen and (min-width: 1440px) {
   .scroll-container {
     width: 100%;
-
     margin-left: 20%;
   }
 
