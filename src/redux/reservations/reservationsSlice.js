@@ -9,63 +9,77 @@ const getUserId = () => {
 const url = 'http://localhost:4000/api/v1/users';
 const BaseUrl = 'http://localhost:4000/api/v1';
 
-export const fetchAllReservations = createAsyncThunk('reservations/fetchAll', async () => {
-  const userId = getUserId();
-  if (userId === null) {
-    return [];
-  }
+export const fetchAllReservations = createAsyncThunk(
+  'reservations/fetchAll',
+  async () => {
+    const userId = getUserId();
+    if (userId === null) {
+      return [];
+    }
 
-  try {
-    const response = await axios(`${url}/${userId}/reservations`);
-    return response.data.data;
-  } catch (error) {
-    return (error);
-  }
-});
+    try {
+      const response = await axios(`${url}/${userId}/reservations`);
+      return response.data.data;
+    } catch (error) {
+      return error;
+    }
+  },
+);
 
-export const deleteReservation = createAsyncThunk('reservations/delete', async (id) => {
-  const userId = getUserId();
-  if (userId === null) {
-    return id;
-  }
+export const deleteReservation = createAsyncThunk(
+  'reservations/delete',
+  async (id) => {
+    const userId = getUserId();
+    if (userId === null) {
+      return id;
+    }
 
-  try {
-    await axios.delete(`${url}/${userId}/reservations/${id}`);
-    return id;
-  } catch (error) {
-    return (error);
-  }
-});
+    try {
+      await axios.delete(`${url}/${userId}/reservations/${id}`);
+      return id;
+    } catch (error) {
+      return error;
+    }
+  },
+);
 
-export const addReservation = createAsyncThunk('reservations/add', async ({ doctorId, date, city }) => {
-  const userId = getUserId();
+export const addReservation = createAsyncThunk(
+  'reservations/add',
+  async ({ doctorId, date, city }) => {
+    const userId = getUserId();
 
-  if (userId === null) {
-    throw new Error('User ID not available');
-  }
+    if (userId === null) {
+      throw new Error('User ID not available');
+    }
 
-  try {
-    const response = await axios.post(`${url}/${userId}/reservations`, {
-      user_id: userId,
-      doctor_id: doctorId,
-      date,
-      city,
-    });
+    try {
+      const response = await axios.post(`${url}/${userId}/reservations`, {
+        user_id: userId,
+        doctor_id: doctorId,
+        date,
+        city,
+      });
 
-    return response.data.data;
-  } catch (error) {
-    throw new Error(error.response?.data?.message || 'Error adding reservation');
-  }
-});
+      return response.data.data;
+    } catch (error) {
+      throw new Error(
+        error.response?.data?.message || 'Error adding reservation',
+      );
+    }
+  },
+);
 
-export const fetchAllDoctors = createAsyncThunk('doctors/fetchAll', async () => {
-  try {
-    const response = await axios(`${BaseUrl}/doctors`);
-    return response.data;
-  } catch (error) {
-    return error;
-  }
-});
+export const fetchAllDoctors = createAsyncThunk(
+  'doctors/fetchAll',
+  async () => {
+    try {
+      const response = await axios(`${BaseUrl}/doctors`);
+      return response.data;
+    } catch (error) {
+      return error;
+    }
+  },
+);
 
 const initialState = {
   reservations: [],
@@ -92,7 +106,9 @@ const reservationsSlice = createSlice({
         state.error = action.error.message;
       })
       .addCase(deleteReservation.fulfilled, (state, action) => {
-        const x = state.reservations.filter((reservation) => reservation.id !== action.payload);
+        const x = state.reservations.filter(
+          (reservation) => reservation.id !== action.payload,
+        );
         state.reservations = x;
       })
       .addCase(fetchAllDoctors.pending, (state) => {
@@ -106,7 +122,6 @@ const reservationsSlice = createSlice({
         state.isLoadingDoctors = false;
       });
   },
-
 });
 
 export default reservationsSlice.reducer;

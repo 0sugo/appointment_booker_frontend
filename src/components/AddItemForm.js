@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addReservation, fetchAllDoctors } from '../redux/reservations/reservationsSlice';
+import {
+  addReservation,
+  fetchAllDoctors,
+} from '../redux/reservations/reservationsSlice';
 import NavigationPanel from './navigation/NavigationPanel';
 import MobileNav from './navigation/MobileNav';
 
@@ -41,13 +44,12 @@ const AddItemForm = () => {
   };
 
   return (
-
     <div className="home">
       <div className="homepage_flex">
         <div className="desk_nav">
           <NavigationPanel />
         </div>
-        <section className="doctors_div">
+        <section>
           <div className="container">
             <div className="homer">
               <div className="form-container flexer exclusive overlay">
@@ -55,17 +57,33 @@ const AddItemForm = () => {
                   <h3>RESERVE AN APPOINTMENT</h3>
                   <hr />
                   <p>
-                    Welcome to Doctors reservation section.
-                    Here you are going to pick a doctor,city
-                    and the specific date for the appointment
+                    Welcome to Doctors reservation section. Here you are going
+                    to pick a doctor,city and the specific date for the
+                    appointment
                     {' '}
                   </p>
                 </div>
                 <form className="form-reserve flexer" onSubmit={handleSubmit}>
-                  <input type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="Enter city" required />
-                  <input type="datetime-local" value={date} onChange={(e) => setDate(e.target.value)} placeholder="Choose date" required />
+                  <input
+                    type="text"
+                    value={city}
+                    onChange={(e) => setCity(e.target.value)}
+                    placeholder="Enter city"
+                    required
+                  />
+                  <input
+                    type="datetime-local"
+                    value={date}
+                    onChange={(e) => setDate(e.target.value)}
+                    placeholder="Choose date"
+                    required
+                  />
                   <div className="flexer abs">
-                    <select value={doctorId} onChange={(e) => setDoctorId(e.target.value)} required>
+                    <select
+                      value={doctorId}
+                      onChange={(e) => setDoctorId(e.target.value)}
+                      required
+                    >
                       <option value="">Select doctor</option>
                       {doctors.map((doctor) => (
                         <option key={doctor.id} value={doctor.id}>
@@ -75,22 +93,19 @@ const AddItemForm = () => {
                     </select>
                     <button type="submit">Book now</button>
                   </div>
-
                 </form>
-                {successMessage && <div className="output">{successMessage}</div>}
-
+                {successMessage && (
+                  <div className="output">{successMessage}</div>
+                )}
               </div>
-
             </div>
           </div>
         </section>
         <div className="mobile_na">
           <MobileNav />
         </div>
-
       </div>
     </div>
-
   );
 };
 

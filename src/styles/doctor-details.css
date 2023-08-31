@@ -1,10 +1,33 @@
+.details-wrapper {
+  display: grid;
+  flex-direction: column;
+  min-height: 100vh;
+  grid-template-rows: 0fr 1fr;
+}
+
 .details-container {
+  min-height: 100%;
   display: grid;
   gap: 1rem;
-  min-height: 100vh;
   grid-template-columns: 1fr 1fr;
   place-content: center;
   padding: 0.7rem 2rem;
+}
+
+.notice {
+  place-self: flex-start;
+  align-self: flex-start;
+}
+
+.delete-btn {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  place-self: flex-end;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #c70000;
+  color: #fafafa;
 }
 
 .doc-img-container {

@@ -72,7 +72,10 @@ const AllReservations = () => {
                       (doc) => doc.id === reservation.doctor_id,
                     );
                     return (
-                      <li key={reservation.id} className="reservation-card flexer">
+                      <li
+                        key={reservation.id}
+                        className="reservation-card flexer"
+                      >
                         <div>
                           {doctor ? (
                             <div className="doctor-image">
@@ -87,7 +90,9 @@ const AllReservations = () => {
                           )}
                         </div>
                         <div className="reservation-details">
-                          <p className="doctor-name">{doctor ? doctor.name : 'Unknown'}</p>
+                          <p className="doctor-name">
+                            {doctor ? doctor.name : 'Unknown'}
+                          </p>
                           <p className="specialisation">
                             Specialisation:
                             {' '}
@@ -117,7 +122,13 @@ const AllReservations = () => {
               )}
             </div>
             {isScrollableRight && (
-              <button className="scroll-button right" type="button" onClick={scrollRight}>{'>'}</button>
+              <button
+                className="scroll-button right"
+                type="button"
+                onClick={scrollRight}
+              >
+                {'>'}
+              </button>
             )}
           </div>
         </div>

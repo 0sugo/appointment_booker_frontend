@@ -6,10 +6,13 @@ const SplashPage = () => (
     <h2>Doctors Appointment</h2>
     <p>Welcome to the Doctors Appointment app</p>
     <div className="splash_links">
-      <Link to="/login" className="splash_link">Login</Link>
-      <Link to="/register" className="splash_link">Register</Link>
+      <Link to="/login" className="splash_link">
+        Login
+      </Link>
+      <Link to="/register" className="splash_link">
+        Register
+      </Link>
     </div>
-
   </div>
 );
 

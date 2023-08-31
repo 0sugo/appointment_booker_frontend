@@ -9,6 +9,7 @@ import AddItemForm from './components/AddItemForm';
 import AllReservations from './components/AllReservations';
 import { fetchAllReservations } from './redux/reservations/reservationsSlice';
 import DoctorDetails from './components/DoctorDetails';
+import AddDoctor from './components/AddDoctorForm';
 
 function App() {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/homepage" element={<HomePage />} />
         <Route path="/doctor-details/:id" element={<DoctorDetails />} />
+        <Route path="/add-doctor" element={<AddDoctor />} />
         <Route path="/add-item" element={<AddItemForm />} />
         <Route path="/all-reservations" element={<AllReservations />} />
       </Routes>
