@@ -16,7 +16,7 @@ const AddDoctor = () => {
     e.preventDefault();
 
     try {
-      await CreateDoctor({
+      const response = await CreateDoctor({
         name,
         specialisation,
         city,
@@ -24,7 +24,7 @@ const AddDoctor = () => {
         duration,
         image_url: imgURL,
       });
-      setSuccessMessage("Doctor created successfully");
+      setSuccessMessage(response);
       navigate("/homepage", { replace: true });
     } catch (error) {
       setSuccessMessage("Failed saving entry");
