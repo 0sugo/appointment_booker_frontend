@@ -29,7 +29,7 @@
   align-items: center;
   text-align: center;
   min-height: 100vh;
-  width:100%;
+  width: 100%;
 }
 
 .hero-reserve h3,
@@ -71,6 +71,14 @@ input {
   color: #e8eed6;
 }
 
+.reservation-card button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
 .container form select,
 .container form input,
 .container form button {
@@ -109,22 +117,21 @@ input {
   align-items: center;
   height: 100vh;
   overflow-x: hidden;
-
 }
+
 .scroll-container {
   display: flex;
   align-items: center;
   overflow-x: hidden;
-  width:80%;
+  width: 80%;
   margin-left: 40%;
   box-sizing: border-box;
-
 }
 
 .all-reservations {
   list-style: none;
   transition: transform 0.3s ease-in-out;
-  gap:20px;
+  gap: 20px;
 }
 
 .all-reservations li:first-child {
@@ -132,16 +139,12 @@ input {
 }
 
 .reservation-card {
-  width: 200px;
-  height:400px;
-  margin: 0 10px;
-  box-sizing: border-box;
-}
-
-.reservation-card {
-  padding: 15px;
-  margin: 10px 0;
   flex-direction: column;
+  width: 200px;
+  height: 400px;
+  padding: 15px;
+  margin: 10px 10px;
+  box-sizing: border-box;
 }
 
 .doctor-image {
@@ -161,7 +164,6 @@ input {
   object-fit: cover;
   border-radius: 50%;
 }
-
 
 .no-image {
   color: #999;
@@ -186,14 +188,6 @@ input {
   margin: 6px 0;
 }
 
-.reservation-card button {
-  background-color: #d9534f;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
 .scroll-button {
   position: fixed;
   background: #9acd32;
@@ -202,7 +196,7 @@ input {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  top:40%;
+  top: 40%;
   z-index: 2;
 }
 
@@ -210,7 +204,6 @@ input {
   left: 0;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
-
 }
 
 .right {
@@ -260,43 +253,40 @@ input {
     width: 60%;
   }
 
-  .container form input{
+  .container form input {
     padding: 18px;
   }
 
-.container form select,
-.container form button {
-  padding: 12px;
-}
+  .container form select,
+  .container form button {
+    padding: 12px;
+  }
 
-.scroll-container {
-  width:100%;
-  margin-left: 32%;
-}
+  .scroll-container {
+    width: 100%;
+    margin-left: 32%;
+  }
 
+  .desk_nav {
+    width: 20%;
+    height: 100vh;
+    box-shadow: 10px 10px 15px rgba(6, 2, 2, 0.2);
+    z-index: 10;
+  }
 
-.desk_nav {
-  width: 20%;
-  height: 100vh;
-  box-shadow: 10px 10px 15px rgba(6, 2, 2, 0.2);
-  z-index: 10;
-}
+  .scroll-button {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
 
-.scroll-button {
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.left {
-  left: 20%;
-
-}
-
+  .left {
+    left: 20%;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .scroll-container {
-    width:100%;
+    width: 100%;
     margin-left: 20%;
   }
 
@@ -304,5 +294,4 @@ input {
     padding: 20px 40px;
     cursor: pointer;
   }
-
 }
