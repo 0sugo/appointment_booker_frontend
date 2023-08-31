@@ -1,10 +1,18 @@
+import React from 'react';
 import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
 import HomePage from '../components/HomePage';
 
-const mockStore = configureStore([]);
+const mockStore = configureStore([thunk]);
+
+jest.mock('../redux/doctors/doctorSlice', () => ({
+  fetchDoctors: () => async (dispatch) => {
+    dispatch({ type: 'FETCH_DOCTORS_SUCCESS', payload: [] });
+  },
+}));
 
 describe('Homepage', () => {
   let store;
@@ -32,7 +40,6 @@ describe('Homepage', () => {
           <HomePage />
         </Provider>
       </Router>,
-
     );
   });
 

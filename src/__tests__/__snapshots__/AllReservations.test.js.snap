@@ -25,18 +25,6 @@ exports[`AllReservations component renders correctly 1`] = `
           </a>
           <a
             class="each_nav"
-            href="/homepage"
-          >
-            Add Doctors
-          </a>
-          <a
-            class="each_nav"
-            href="/homepage"
-          >
-            Delete Doctors
-          </a>
-          <a
-            class="each_nav"
             href="/all-reservations"
           >
             All Reservations
@@ -190,18 +178,6 @@ exports[`AllReservations component renders correctly 1`] = `
               href="/homepage"
             >
               Doctors
-            </a>
-            <a
-              class="each_nav"
-              href="/homepage"
-            >
-              Add Doctors
-            </a>
-            <a
-              class="each_nav"
-              href="/homepage"
-            >
-              Delete Doctors
             </a>
             <a
               class="each_nav"

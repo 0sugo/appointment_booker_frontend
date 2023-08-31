@@ -68,18 +68,6 @@ Object {
                 </a>
                 <a
                   class="each_nav"
-                  href="/homepage"
-                >
-                  Add Doctors
-                </a>
-                <a
-                  class="each_nav"
-                  href="/homepage"
-                >
-                  Delete Doctors
-                </a>
-                <a
-                  class="each_nav"
                   href="/all-reservations"
                 >
                   All Reservations
@@ -111,18 +99,6 @@ Object {
                 href="/homepage"
               >
                 Doctors
-              </a>
-              <a
-                class="each_nav"
-                href="/homepage"
-              >
-                Add Doctors
-              </a>
-              <a
-                class="each_nav"
-                href="/homepage"
-              >
-                Delete Doctors
               </a>
               <a
                 class="each_nav"
@@ -198,7 +174,7 @@ Object {
           class="doctors_div"
         >
           <div
-            class="home"
+            class="home flexer"
           >
             <div
               class="home_header"
@@ -486,18 +462,6 @@ Object {
               </a>
               <a
                 class="each_nav"
-                href="/homepage"
-              >
-                Add Doctors
-              </a>
-              <a
-                class="each_nav"
-                href="/homepage"
-              >
-                Delete Doctors
-              </a>
-              <a
-                class="each_nav"
                 href="/all-reservations"
               >
                 All Reservations
@@ -529,18 +493,6 @@ Object {
               href="/homepage"
             >
               Doctors
-            </a>
-            <a
-              class="each_nav"
-              href="/homepage"
-            >
-              Add Doctors
-            </a>
-            <a
-              class="each_nav"
-              href="/homepage"
-            >
-              Delete Doctors
             </a>
             <a
               class="each_nav"
@@ -616,7 +568,7 @@ Object {
         class="doctors_div"
       >
         <div
-          class="home"
+          class="home flexer"
         >
           <div
             class="home_header"
