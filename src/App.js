@@ -11,7 +11,7 @@ import { fetchAllReservations } from './redux/reservations/reservationsSlice';
 import DoctorDetails from './components/DoctorDetails';
 import AddDoctor from './components/AddDoctorForm';
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
