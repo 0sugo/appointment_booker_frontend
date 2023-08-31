@@ -49,7 +49,7 @@ const AddItemForm = () => {
         <div className="desk_nav">
           <NavigationPanel />
         </div>
-        <section className="doctors_div">
+        <section>
           <div className="container">
             <div className="homer">
               <div className="form-container flexer exclusive overlay">
