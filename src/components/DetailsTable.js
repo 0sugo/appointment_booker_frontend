@@ -1,4 +1,3 @@
-/*eslint-disable */
 import PropTypes from 'prop-types';
 import '../styles/details-table.css';
 import { AiOutlineRightCircle } from 'react-icons/ai';
@@ -11,12 +10,10 @@ const DetailsTable = ({ detailsData }) => {
       replace: true,
       state: {
         doctorId: detailsData.id,
-        detailsData: detailsData,
+        detailsData,
       },
     });
   };
-
-
 
   return (
     <div className="table-container">
@@ -60,6 +57,7 @@ export default DetailsTable;
 
 DetailsTable.propTypes = {
   detailsData: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     specialisation: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
