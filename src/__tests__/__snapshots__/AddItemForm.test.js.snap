@@ -28,18 +28,6 @@ exports[`AddItemForm snapshot 1`] = `
             </a>
             <a
               class="each_nav"
-              href="/homepage"
-            >
-              Add Doctors
-            </a>
-            <a
-              class="each_nav"
-              href="/homepage"
-            >
-              Delete Doctors
-            </a>
-            <a
-              class="each_nav"
               href="/all-reservations"
             >
               All Reservations
@@ -108,9 +96,7 @@ exports[`AddItemForm snapshot 1`] = `
           </ul>
         </div>
       </div>
-      <section
-        class="doctors_div"
-      >
+      <section>
         <div
           class="container"
         >
@@ -226,18 +212,6 @@ exports[`AddItemForm snapshot 1`] = `
                 href="/homepage"
               >
                 Doctors
-              </a>
-              <a
-                class="each_nav"
-                href="/homepage"
-              >
-                Add Doctors
-              </a>
-              <a
-                class="each_nav"
-                href="/homepage"
-              >
-                Delete Doctors
               </a>
               <a
                 class="each_nav"
