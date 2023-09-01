@@ -19,7 +19,7 @@ const DetailsTable = ({ detailsData }) => {
     <div className="table-container">
       <div className="title">
         <h2>{detailsData.name}</h2>
-        <p>- $50 Pre-Payment on Reservation</p>
+        <p>- $20 Pre-Payment on Reservation</p>
       </div>
       <table>
         <tbody>
@@ -37,11 +37,14 @@ const DetailsTable = ({ detailsData }) => {
           </tr>
           <tr>
             <td>Price</td>
-            <td>$25</td>
+            <td>
+              $
+              {detailsData.price}
+            </td>
           </tr>
           <tr>
             <td>Duration</td>
-            <td>1 Hour</td>
+            <td>{detailsData.duration}</td>
           </tr>
         </tbody>
       </table>
@@ -57,9 +60,11 @@ export default DetailsTable;
 
 DetailsTable.propTypes = {
   detailsData: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     specialisation: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    duration: PropTypes.string.isRequired,
   }).isRequired,
 };
