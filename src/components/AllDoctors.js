@@ -26,8 +26,8 @@ const AllDoctors = () => {
         <h2>Available Doctors</h2>
         <p>Please select a doctor to book an appointment with</p>
         <div className="dots">
-          {[...Array(15)].map(() => (
-            <div key="div" className="dot" />
+          {[...Array(15)].map((index) => (
+            <div key={index} className="dot" />
           ))}
         </div>
       </div>
@@ -46,8 +46,8 @@ const AllDoctors = () => {
                 </div>
                 <h3 className="each_doc_name">{eachDoctor.name}</h3>
                 <div className="dots">
-                  {[...Array(15)].map(() => (
-                    <div key="div" className="dot" />
+                  {[...Array(15)].map((index) => (
+                    <div key={index} className="dot" />
                   ))}
                 </div>
                 <p className="each_doc_spec">
