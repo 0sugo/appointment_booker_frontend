@@ -1,0 +1,846 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Homepage renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="homepage_flex"
+      >
+        <div
+          class="mobile_na"
+        >
+          <div
+            class="mobile_nav"
+          >
+            <button
+              class="hamburger"
+              data-testid="hamburger"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"
+                />
+              </svg>
+            </button>
+            <nav
+              class="mobile_menu "
+              data-testid="mobile_menu"
+            >
+              <button
+                class="close_menu"
+                type="button"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                  />
+                </svg>
+              </button>
+              <nav>
+                <a
+                  class="each_nav"
+                  href="/homepage"
+                >
+                  Doctors
+                </a>
+                <a
+                  class="each_nav"
+                  href="/all-reservations"
+                >
+                  All Reservations
+                </a>
+                <button
+                  class="logout_btn"
+                  type="button"
+                >
+                  Logout
+                </button>
+              </nav>
+            </nav>
+          </div>
+        </div>
+        <div
+          class="desk_nav"
+        >
+          <div
+            class="Navbar"
+          >
+            <h4
+              class="nav_h4"
+            >
+              Doctors Appointment
+            </h4>
+            <nav>
+              <a
+                class="each_nav"
+                href="/homepage"
+              >
+                Doctors
+              </a>
+              <a
+                class="each_nav"
+                href="/all-reservations"
+              >
+                All Reservations
+              </a>
+              <button
+                class="logout_btn"
+                type="button"
+              >
+                Logout
+              </button>
+            </nav>
+            <ul
+              class="social-links nav_social_links"
+            >
+              <li
+                class="social-link"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                  />
+                </svg>
+              </li>
+              <li
+                class="social-link"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 320 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                  />
+                </svg>
+              </li>
+              <li
+                class="social-link"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                  />
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <section
+          class="doctors_div"
+        >
+          <div
+            class="home flexer"
+          >
+            <div
+              class="home_header"
+            >
+              <h2>
+                Available Doctors
+              </h2>
+              <p>
+                Please select a doctor to book an appointment with
+              </p>
+              <div
+                class="dots"
+              >
+                <div
+                  class="dot"
+                />
+                <div
+                  class="dot"
+                />
+                <div
+                  class="dot"
+                />
+                <div
+                  class="dot"
+                />
+                <div
+                  class="dot"
+                />
+                <div
+                  class="dot"
+                />
+                <div
+                  class="dot"
+                />
+                <div
+                  class="dot"
+                />
+                <div
+                  class="dot"
+                />
+                <div
+                  class="dot"
+                />
+                <div
+                  class="dot"
+                />
+                <div
+                  class="dot"
+                />
+                <div
+                  class="dot"
+                />
+                <div
+                  class="dot"
+                />
+                <div
+                  class="dot"
+                />
+              </div>
+            </div>
+            <div
+              class="homepage_content"
+            >
+              <button
+                class="prev_btn"
+                type="button"
+              >
+                &lt;
+              </button>
+              <section
+                class="allDoctors"
+              >
+                <a
+                  href="/doctor-details/1"
+                >
+                  <article
+                    class="eachDoctor"
+                  >
+                    <div
+                      class="img_div"
+                    >
+                      <img
+                        alt="Dr martins"
+                        src="example.com/image1.jpg"
+                      />
+                    </div>
+                    <h3
+                      class="each_doc_name"
+                    >
+                      Dr martins
+                    </h3>
+                    <div
+                      class="dots"
+                    >
+                      <div
+                        class="dot"
+                      />
+                      <div
+                        class="dot"
+                      />
+                      <div
+                        class="dot"
+                      />
+                      <div
+                        class="dot"
+                      />
+                      <div
+                        class="dot"
+                      />
+                      <div
+                        class="dot"
+                      />
+                      <div
+                        class="dot"
+                      />
+                      <div
+                        class="dot"
+                      />
+                      <div
+                        class="dot"
+                      />
+                      <div
+                        class="dot"
+                      />
+                      <div
+                        class="dot"
+                      />
+                      <div
+                        class="dot"
+                      />
+                      <div
+                        class="dot"
+                      />
+                      <div
+                        class="dot"
+                      />
+                      <div
+                        class="dot"
+                      />
+                    </div>
+                    <p
+                      class="each_doc_spec"
+                    >
+                      Specializes in
+                       
+                      Neurosurgery
+                       
+                      and currently practicing in
+                       
+                      Ibadan
+                       
+                      city
+                    </p>
+                    <ul
+                      class="social-links"
+                    >
+                      <li
+                        class="social-link"
+                      >
+                        <svg
+                          fill="currentColor"
+                          height="1em"
+                          stroke="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 512 512"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                          />
+                        </svg>
+                      </li>
+                      <li
+                        class="social-link"
+                      >
+                        <svg
+                          fill="currentColor"
+                          height="1em"
+                          stroke="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 320 512"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                          />
+                        </svg>
+                      </li>
+                      <li
+                        class="social-link"
+                      >
+                        <svg
+                          fill="currentColor"
+                          height="1em"
+                          stroke="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 448 512"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                          />
+                        </svg>
+                      </li>
+                    </ul>
+                  </article>
+                </a>
+              </section>
+              <button
+                class="next_btn"
+                type="button"
+              >
+                &gt;
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="homepage_flex"
+    >
+      <div
+        class="mobile_na"
+      >
+        <div
+          class="mobile_nav"
+        >
+          <button
+            class="hamburger"
+            data-testid="hamburger"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"
+              />
+            </svg>
+          </button>
+          <nav
+            class="mobile_menu "
+            data-testid="mobile_menu"
+          >
+            <button
+              class="close_menu"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                />
+              </svg>
+            </button>
+            <nav>
+              <a
+                class="each_nav"
+                href="/homepage"
+              >
+                Doctors
+              </a>
+              <a
+                class="each_nav"
+                href="/all-reservations"
+              >
+                All Reservations
+              </a>
+              <button
+                class="logout_btn"
+                type="button"
+              >
+                Logout
+              </button>
+            </nav>
+          </nav>
+        </div>
+      </div>
+      <div
+        class="desk_nav"
+      >
+        <div
+          class="Navbar"
+        >
+          <h4
+            class="nav_h4"
+          >
+            Doctors Appointment
+          </h4>
+          <nav>
+            <a
+              class="each_nav"
+              href="/homepage"
+            >
+              Doctors
+            </a>
+            <a
+              class="each_nav"
+              href="/all-reservations"
+            >
+              All Reservations
+            </a>
+            <button
+              class="logout_btn"
+              type="button"
+            >
+              Logout
+            </button>
+          </nav>
+          <ul
+            class="social-links nav_social_links"
+          >
+            <li
+              class="social-link"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                />
+              </svg>
+            </li>
+            <li
+              class="social-link"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 320 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                />
+              </svg>
+            </li>
+            <li
+              class="social-link"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                />
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <section
+        class="doctors_div"
+      >
+        <div
+          class="home flexer"
+        >
+          <div
+            class="home_header"
+          >
+            <h2>
+              Available Doctors
+            </h2>
+            <p>
+              Please select a doctor to book an appointment with
+            </p>
+            <div
+              class="dots"
+            >
+              <div
+                class="dot"
+              />
+              <div
+                class="dot"
+              />
+              <div
+                class="dot"
+              />
+              <div
+                class="dot"
+              />
+              <div
+                class="dot"
+              />
+              <div
+                class="dot"
+              />
+              <div
+                class="dot"
+              />
+              <div
+                class="dot"
+              />
+              <div
+                class="dot"
+              />
+              <div
+                class="dot"
+              />
+              <div
+                class="dot"
+              />
+              <div
+                class="dot"
+              />
+              <div
+                class="dot"
+              />
+              <div
+                class="dot"
+              />
+              <div
+                class="dot"
+              />
+            </div>
+          </div>
+          <div
+            class="homepage_content"
+          >
+            <button
+              class="prev_btn"
+              type="button"
+            >
+              &lt;
+            </button>
+            <section
+              class="allDoctors"
+            >
+              <a
+                href="/doctor-details/1"
+              >
+                <article
+                  class="eachDoctor"
+                >
+                  <div
+                    class="img_div"
+                  >
+                    <img
+                      alt="Dr martins"
+                      src="example.com/image1.jpg"
+                    />
+                  </div>
+                  <h3
+                    class="each_doc_name"
+                  >
+                    Dr martins
+                  </h3>
+                  <div
+                    class="dots"
+                  >
+                    <div
+                      class="dot"
+                    />
+                    <div
+                      class="dot"
+                    />
+                    <div
+                      class="dot"
+                    />
+                    <div
+                      class="dot"
+                    />
+                    <div
+                      class="dot"
+                    />
+                    <div
+                      class="dot"
+                    />
+                    <div
+                      class="dot"
+                    />
+                    <div
+                      class="dot"
+                    />
+                    <div
+                      class="dot"
+                    />
+                    <div
+                      class="dot"
+                    />
+                    <div
+                      class="dot"
+                    />
+                    <div
+                      class="dot"
+                    />
+                    <div
+                      class="dot"
+                    />
+                    <div
+                      class="dot"
+                    />
+                    <div
+                      class="dot"
+                    />
+                  </div>
+                  <p
+                    class="each_doc_spec"
+                  >
+                    Specializes in
+                     
+                    Neurosurgery
+                     
+                    and currently practicing in
+                     
+                    Ibadan
+                     
+                    city
+                  </p>
+                  <ul
+                    class="social-links"
+                  >
+                    <li
+                      class="social-link"
+                    >
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 512 512"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                        />
+                      </svg>
+                    </li>
+                    <li
+                      class="social-link"
+                    >
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 320 512"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                        />
+                      </svg>
+                    </li>
+                    <li
+                      class="social-link"
+                    >
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 448 512"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                        />
+                      </svg>
+                    </li>
+                  </ul>
+                </article>
+              </a>
+            </section>
+            <button
+              class="next_btn"
+              type="button"
+            >
+              &gt;
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
